@@ -1,0 +1,1017 @@
+<!doctype html>
+<html lang="mn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Оюундарь · Хөгжлийн жор 90</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Montserrat:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FAF6F1;--paper:#FFFDFA;--ink:#2E1F24;--muted:#8A7A80;--wine:#7E2A40;--rose:#C99AA5;--pale:#F5E7E9;--line:#E9DEDC;
+  --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --sans:"Montserrat","Helvetica Neue",Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;--hand:"Caveat","Segoe Print","Bradley Hand",cursive;
+  --r:10px;--shadow:0 1px 2px rgba(46,31,36,.04),0 12px 32px -18px rgba(126,42,64,.18);
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#18120F;--paper:#221A18;--ink:#F3E9E6;--muted:#A8969B;--wine:#E08DA2;--rose:#9E6E7A;--pale:#33242A;--line:#3A2D2E;--shadow:0 1px 2px rgba(0,0,0,.2),0 12px 32px -18px rgba(0,0,0,.6);}}
+:root[data-theme="dark"]{--bg:#18120F;--paper:#221A18;--ink:#F3E9E6;--muted:#A8969B;--wine:#E08DA2;--rose:#9E6E7A;--pale:#33242A;--line:#3A2D2E;--shadow:0 1px 2px rgba(0,0,0,.2),0 12px 32px -18px rgba(0,0,0,.6)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.lbl{font-family:var(--sans);font-size:.66rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.mono{font-family:var(--mono)}
+.wrap{max-width:980px;margin:0 auto;padding:0 1.4rem}
+
+/* COVER */
+.cover{min-height:100svh;display:flex;flex-direction:column;justify-content:space-between;padding:2.2rem 0 2.4rem}
+.cover-top{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:1rem}
+.cover-mid{padding:3rem 0}
+.name{font-family:var(--serif);font-weight:500;font-size:clamp(3.4rem,11vw,7.5rem);line-height:.9;letter-spacing:-.02em}
+.rxline{display:flex;align-items:baseline;gap:.6rem;margin-top:.6rem}
+.rx{font-family:var(--serif);font-style:italic;font-weight:600;color:var(--wine);font-size:clamp(2.6rem,7vw,4.4rem);line-height:1}
+.rxline span{font-family:var(--serif);font-style:italic;font-size:clamp(2rem,5.5vw,3.4rem);color:var(--wine)}
+.sub{font-family:var(--serif);font-style:italic;font-size:1.35rem;color:var(--muted);margin-top:.8rem}
+.meta{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:2.6rem}
+.meta div{padding:.9rem 1rem .8rem 0}
+.meta div+div{padding-left:1rem;border-left:1px solid var(--line)}
+.meta b{display:block;font-family:var(--mono);font-weight:500;font-size:.95rem;margin-top:.15rem}
+.track{margin-top:2.2rem}
+.track-top{display:flex;justify-content:space-between;align-items:baseline}
+.track-top .mono{font-size:.85rem;letter-spacing:.08em}
+.bar{position:relative;height:1px;background:var(--line);margin-top:.9rem}
+.bar i{position:absolute;left:0;top:0;height:1px;background:var(--wine);transition:width .8s ease}
+.bar::before,.bar::after{content:"";position:absolute;top:-4px;width:9px;height:9px;border-radius:50%}
+.bar::before{left:-1px;background:var(--wine)}
+.bar::after{right:-1px;border:1px solid var(--rose);background:var(--bg)}
+.cover-quote{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem}
+.cover-quote q{font-family:var(--serif);font-style:italic;font-size:1.5rem}
+.scroll{font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);text-decoration:none;white-space:nowrap}
+
+/* DASHBOARD */
+.dash{padding:5rem 0 3rem;border-top:1px solid var(--line)}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;margin-bottom:2.2rem}
+.head h2{font-family:var(--serif);font-weight:500;font-size:clamp(2rem,5vw,2.8rem);line-height:1}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem}
+.nav{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:1.4rem 1.4rem 1.2rem;text-align:left;min-height:190px;display:flex;flex-direction:column;justify-content:space-between;transition:transform .35s cubic-bezier(.2,.7,.2,1),border-color .3s}
+.nav:hover{transform:translateY(-3px);border-color:var(--rose)}
+.nav .n{font-family:var(--mono);font-size:.78rem;color:var(--wine)}
+.nav h3{font-family:var(--serif);font-weight:600;font-size:1.65rem;line-height:1.1;margin-top:1.4rem}
+.nav .foot{width:100%;display:flex;justify-content:space-between;align-items:center;margin-top:1rem}
+.nav .arr{flex:none;width:28px;height:28px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;color:var(--wine);transition:background .3s,color .3s}
+.nav:hover .arr{background:var(--wine);color:var(--paper);border-color:var(--wine)}
+.nav .stat{font-family:var(--mono);font-size:.72rem;color:var(--muted)}
+.next{margin-top:1.6rem;border:1px solid var(--line);border-radius:var(--r);display:grid;grid-template-columns:auto 1fr;align-items:center;gap:1.4rem;padding:1.1rem 1.4rem;background:var(--pale)}
+.next .when{font-family:var(--mono);font-size:.9rem;color:var(--wine)}
+.next ul{list-style:none;display:flex;flex-wrap:wrap;gap:.4rem 1.4rem;font-size:.9rem}
+.next li::before{content:"○";color:var(--rose);margin-right:.45rem;font-size:.7rem}
+
+/* SIDE EFFECTS */
+ .fx{padding:2rem 0 3rem;display:grid;grid-template-columns:1fr;gap:2rem;font-size:.82rem;color:var(--muted)}
+.fx ul{list-style:none;margin-top:.7rem}
+.fx li{padding:.2rem 0}
+.fx li::before{content:"— ";color:var(--rose)}
+.fx p.t{font-family:var(--serif);font-style:italic;font-size:1.25rem;color:var(--ink);margin-top:.5rem}
+.sig{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:1.2rem}
+.sig .mono{font-size:.72rem}
+
+/* DRAWER */
+.scrim{position:fixed;inset:0;background:rgba(30,18,22,.35);backdrop-filter:blur(2px);opacity:0;pointer-events:none;transition:opacity .16s ease;z-index:20}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(600px,100%);background:var(--bg);z-index:21;transform:translateX(100%);transition:transform .18s cubic-bezier(.2,.8,.2,1);display:flex;flex-direction:column;border-left:1px solid var(--line);visibility:hidden;transition:transform .18s cubic-bezier(.2,.8,.2,1),visibility 0s .18s}
+.open .scrim{opacity:1;pointer-events:auto}
+.open .drawer{transform:none;visibility:visible;transition:transform .18s cubic-bezier(.2,.8,.2,1),visibility 0s}
+.dh{display:flex;justify-content:space-between;align-items:flex-start;padding:calc(1.4rem + env(safe-area-inset-top,0px)) 1.6rem 1.1rem;border-bottom:1px solid var(--line)}
+.dh .n{font-family:var(--mono);font-size:.78rem;color:var(--wine)}
+.dh h2{font-family:var(--serif);font-weight:500;font-size:2.1rem;line-height:1.05;margin-top:.2rem}
+.x{width:36px;height:36px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;font-size:1.1rem;flex:none}
+.db{overflow-y:auto;padding:1.6rem 1.6rem calc(3rem + env(safe-area-inset-bottom,0px));flex:1}
+.block+.block{margin-top:2.4rem}
+.bt{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--ink);padding-bottom:.4rem;margin-bottom:.4rem}
+.bt h4{font-family:var(--serif);font-weight:600;font-size:1.35rem}
+@media (max-width:640px){
+  .drawer{top:auto;width:100%;height:92svh;border-left:0;border-top:1px solid var(--line);border-radius:16px 16px 0 0;transform:translateY(100%)}
+  .dh{padding-top:1.2rem}
+  .dh::before{content:"";position:absolute;left:50%;top:.5rem;width:40px;height:4px;border-radius:4px;background:var(--line);transform:translateX(-50%)}
+}
+
+/* accordion */
+.acc{border-bottom:1px solid var(--line)}
+.acc>button{width:100%;display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1rem 0;text-align:left}
+.acc>button .t{font-family:var(--serif);font-weight:600;font-size:1.3rem}
+.plus{width:22px;height:22px;position:relative;flex:none}
+.plus::before,.plus::after{content:"";position:absolute;left:50%;top:50%;width:11px;height:1.4px;background:var(--wine);transform:translate(-50%,-50%);transition:transform .3s}
+.plus::after{transform:translate(-50%,-50%) rotate(90deg)}
+.acc.on .plus::after{transform:translate(-50%,-50%) rotate(0)}
+.body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s ease}
+.acc.on .body{grid-template-rows:1fr}
+.body>div{overflow:hidden}
+.body .in{padding:0 0 1.2rem}
+.dash-list{list-style:none}
+.dash-list li{padding:.3rem 0 .3rem 1.2rem;position:relative}
+.dash-list li::before{content:"";position:absolute;left:0;top:.95rem;width:8px;height:1px;background:var(--wine)}
+.pull{font-family:var(--serif);font-style:italic;font-size:1.35rem;line-height:1.4;border-left:1px solid var(--wine);padding-left:1rem}
+
+/* prescription */
+.rxmeta{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-radius:var(--r);background:var(--paper)}
+.rxmeta div{padding:.7rem .9rem}
+.rxmeta div+div{border-left:1px solid var(--line)}
+.rxmeta b{display:block;font-family:var(--mono);font-weight:500;font-size:.85rem}
+.row{display:grid;grid-template-columns:2rem 1.3fr 1fr 1fr 1fr;gap:.6rem;align-items:baseline;padding:.85rem 0;border-bottom:1px dashed var(--line);font-family:var(--mono);font-size:.8rem}
+.row .nm{font-family:var(--serif);font-size:1.2rem;font-weight:600}
+.row .i{color:var(--wine)}
+.row.h{border-bottom:1px solid var(--line);padding:.4rem 0}
+.row.h span{font-family:var(--sans);font-size:.62rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem}
+.col{border:1px solid var(--line);border-radius:var(--r);background:var(--paper);padding:1rem;text-align:left;transition:border-color .3s}
+.col.on{border-color:var(--wine)}
+.col .t{font-family:var(--serif);font-weight:600;font-size:1.25rem}
+.col .tm{font-family:var(--mono);font-size:.72rem;color:var(--wine)}
+.col ul{list-style:none;font-size:.85rem;margin-top:.4rem}
+.col .go{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:.6rem;display:block}
+.routine{margin-top:1rem;background:var(--pale);border-radius:var(--r);padding:1rem 1.1rem;display:none}
+.routine.show{display:block;animation:rise .35s ease}
+@keyframes rise{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.routine .r{display:grid;grid-template-columns:3.6rem 1fr;gap:.6rem;padding:.35rem 0;font-size:.88rem}
+.routine .r span:first-child{font-family:var(--mono);color:var(--wine);font-size:.8rem}
+
+/* daily dose */
+.datebar{display:flex;align-items:center;justify-content:space-between;border:1px solid var(--line);border-radius:var(--r);background:var(--paper);padding:.5rem .6rem;margin-bottom:1.4rem}
+.datebar .mono{font-size:.95rem}
+.datebar button{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;color:var(--wine)}
+.datebar button:disabled{opacity:.25;cursor:default}
+.slot+.slot{margin-top:1.4rem}
+.task{display:flex;align-items:center;gap:.9rem;width:100%;padding:.75rem 0;border-bottom:1px solid var(--line);text-align:left;font-size:.95rem}
+.box{width:20px;height:20px;border:1px solid var(--rose);border-radius:4px;flex:none;display:grid;place-items:center;transition:background .25s,border-color .25s}
+.box svg{width:12px;height:12px;stroke:var(--paper);stroke-width:2.4;fill:none;stroke-dasharray:20;stroke-dashoffset:20;transition:stroke-dashoffset .35s ease .05s}
+.task.done .box{background:var(--wine);border-color:var(--wine)}
+.task.done .box svg{stroke-dashoffset:0}
+.task .txt{transition:color .3s}
+.task.done .txt{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--rose)}
+.sum{margin-top:1.8rem;display:flex;justify-content:space-between;font-family:var(--mono);font-size:.8rem;color:var(--muted)}
+.thin{height:2px;background:var(--line);margin-top:.6rem;border-radius:2px;overflow:hidden}
+.thin i{display:block;height:100%;background:var(--wine);transition:width .5s ease}
+
+/* timeline */
+.tl{position:relative;padding-left:1.6rem}
+.tl::before{content:"";position:absolute;left:5px;top:.6rem;bottom:.6rem;width:1px;background:var(--line)}
+.tl .acc{border:0;position:relative}
+.tl .acc::before{content:"";position:absolute;left:-1.6rem;top:1.35rem;width:11px;height:11px;border-radius:50%;border:1px solid var(--wine);background:var(--bg)}
+.tl .acc.on::before{background:var(--wine)}
+.tl .acc>button{align-items:flex-start}
+.mh .m{font-family:var(--mono);font-size:.78rem;color:var(--wine)}
+.mh .t{display:block;font-family:var(--serif);font-weight:600;font-size:1.45rem;line-height:1.15}
+.mh .e{font-family:var(--serif);font-style:italic;color:var(--muted);font-size:1rem}
+.mh ul{list-style:none;font-size:.85rem;color:var(--muted);margin-top:.3rem}
+.wk{display:grid;gap:.6rem}
+.wk div{border:1px solid var(--line);background:var(--paper);border-radius:var(--r);padding:.75rem .9rem;font-size:.88rem}
+.wk .lbl{display:block;color:var(--wine);margin-bottom:.1rem}
+.wk .fu{background:var(--pale);border-color:transparent}
+
+/* progress */
+.big{display:flex;align-items:baseline;gap:.6rem}
+.big b{font-family:var(--serif);font-weight:500;font-size:4.2rem;line-height:1}
+.big span{font-family:var(--mono);color:var(--muted)}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-top:1.4rem}
+.st{border:1px solid var(--line);border-radius:var(--r);background:var(--paper);padding:.9rem 1rem}
+.st b{display:block;font-family:var(--mono);font-weight:500;font-size:1.35rem;margin-top:.2rem}
+.st small{font-size:.75rem;color:var(--muted)}
+.step{display:flex;align-items:center;gap:.5rem;margin-top:.3rem}
+.step button{width:24px;height:24px;border:1px solid var(--line);border-radius:50%;color:var(--wine);line-height:1}
+.dots{display:grid;grid-template-columns:repeat(15,1fr);gap:5px;margin-top:.8rem}
+.dots i{aspect-ratio:1;border-radius:50%;border:1px solid var(--line);position:relative;overflow:hidden}
+.dots i::after{content:"";position:absolute;inset:0;background:var(--wine);opacity:var(--o,0)}
+.dots i.today{border-color:var(--wine)}
+.legend{display:flex;justify-content:space-between;font-family:var(--mono);font-size:.68rem;color:var(--muted);margin-top:.5rem}
+
+/* follow-up */
+.tabs{display:flex;gap:.4rem;margin-bottom:1.2rem}
+.tabs button{font-family:var(--mono);font-size:.8rem;padding:.4rem .9rem;border:1px solid var(--line);border-radius:99px}
+.tabs button.on{background:var(--wine);color:var(--paper);border-color:var(--wine)}
+.note{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:1.2rem 1.2rem .6rem}
+.q{margin-bottom:1rem}
+.q label{display:block;font-family:var(--serif);font-style:italic;font-size:1.15rem;color:var(--wine)}
+.q textarea{width:100%;border:0;background:transparent repeating-linear-gradient(transparent 0 31px,var(--line) 31px 32px);background-attachment:local;font:inherit;color:var(--ink);resize:vertical;min-height:64px;line-height:32px;outline:none}
+.saved{font-family:var(--mono);font-size:.72rem;color:var(--muted);text-align:right;margin-top:.6rem;min-height:1em}
+
+@media (max-width:760px){.grid{grid-template-columns:1fr 1fr}.meta{grid-template-columns:1fr 1fr}.meta div:nth-child(3){padding-left:0;border-left:0}.meta div:nth-child(n+3){border-top:1px solid var(--line)}}
+@media (max-width:640px){
+  .wrap{padding:0 1.1rem}
+  .grid{gap:.8rem}
+  .nav{min-height:160px;padding:1.1rem}
+  .nav h3{font-size:1.35rem;margin-top:1rem}
+  .next{grid-template-columns:1fr;gap:.5rem}
+  .fx{grid-template-columns:1fr}
+  .cols3{grid-template-columns:1fr}
+  .row{grid-template-columns:2rem 1fr 1fr;row-gap:.1rem}
+  .row .nm{grid-column:2/-1}
+  .row>span:nth-child(3){grid-column:2}
+  .row>span:nth-child(5){grid-column:2/-1}
+  .row.h{display:none}
+  .rxmeta{grid-template-columns:1fr}
+  .rxmeta div+div{border-left:0;border-top:1px solid var(--line)}
+  .cover-quote{flex-direction:column;align-items:flex-start}
+}
+
+/* PRESCRIPTION SHEET */
+.cover{justify-content:flex-start;gap:1.6rem}
+.cv-top{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:.9rem}
+.sheet{position:relative;max-width:560px;width:100%;margin:1rem auto 0;background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:2.4rem 1.8rem 1.6rem;box-shadow:0 2px 0 var(--line),0 24px 50px -28px rgba(126,42,64,.35);transform:rotate(-1.2deg)}
+.sheet::before{content:"";position:absolute;left:0;right:0;top:0;height:12px;background:radial-gradient(circle at 6px 0,var(--bg) 4px,transparent 4.5px) 0 0/12px 12px repeat-x;border-bottom:1px dashed var(--rose)}
+.tape{position:absolute;top:-14px;left:50%;width:120px;height:30px;transform:translateX(-50%) rotate(2deg);background:var(--pale);opacity:.9;border-left:1px dashed var(--rose);border-right:1px dashed var(--rose)}
+.doodle{position:absolute;fill:none;stroke:var(--rose);stroke-width:1.5}
+.d1{width:44px;right:-18px;top:34%;transform:rotate(-28deg);background:var(--bg);border-radius:10px}
+.d2{width:22px;left:-10px;bottom:22%;fill:var(--pale)}
+.fh{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2px solid var(--wine);padding-bottom:.6rem;margin-bottom:.4rem}
+.fh-s{font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.fh-t{font-family:var(--serif);font-weight:600;font-size:3rem;line-height:1;letter-spacing:.18em;color:var(--wine)}
+.serial{display:flex;flex-direction:column;align-items:flex-end;gap:.3rem}
+.serial .mono{font-size:.8rem;color:var(--wine)}
+.bc{width:86px;height:24px;background:repeating-linear-gradient(90deg,var(--ink) 0 2px,transparent 2px 4px,var(--ink) 4px 5px,transparent 5px 8px,var(--ink) 8px 11px,transparent 11px 12px)}
+.fld{display:flex;align-items:baseline;gap:.6rem;border-bottom:1px dotted var(--muted);padding:.55rem 0 .1rem;min-width:0}
+.fld span{font-size:.72rem;color:var(--muted);white-space:nowrap}
+.fld em{font-family:var(--hand);font-style:normal;font-size:1.55rem;line-height:1.1;color:var(--wine);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fld2{display:grid;grid-template-columns:1.3fr 1fr;gap:1rem}
+.rpbox{display:grid;grid-template-columns:auto 1fr;gap:.8rem;margin-top:1.1rem}
+.bigrx{font-family:var(--serif);font-style:italic;font-weight:600;font-size:4.2rem;line-height:.8;color:var(--wine)}
+.rps{list-style:none;counter-reset:r}
+.rps li{display:grid;grid-template-columns:2.6rem 1fr;align-items:baseline;border-bottom:1px solid var(--line);padding:.35rem 0}
+.rps .k{font-family:var(--serif);font-style:italic;font-weight:600;color:var(--muted);font-size:.95rem}
+.rps em{font-family:var(--hand);font-style:normal;font-size:1.5rem;line-height:1.1;color:var(--ink)}
+.rps em.ds{font-size:1.3rem;color:var(--wine)}
+.use{margin-top:1.3rem}
+.signrow{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;margin-top:1rem}
+.sg{flex:1;flex-direction:column;align-items:flex-start;gap:0}
+.sig{font-size:2.1rem!important}
+.stamp{width:96px;height:96px;flex:none;color:var(--wine);opacity:.75;transform:rotate(-14deg);margin:-1rem -.4rem -.4rem 0}
+.warn{font-size:.72rem;color:var(--muted);text-align:center;margin-top:1rem;border-top:1px dashed var(--line);padding-top:.7rem}
+.cover .track-top .mono{font-size:.8rem}
+
+/* LABEL CARDS */
+.nav{padding:0;overflow:hidden;min-height:0}
+.nav .lab{width:100%;display:flex;justify-content:space-between;align-items:center;background:var(--wine);color:var(--paper);padding:.5rem 1rem}
+.nav .lab .n{color:var(--paper);font-family:var(--mono);font-size:.75rem}
+.nav .lab .stat{color:var(--paper);opacity:.85}
+.nav .cap{width:30px;height:14px}
+.nav .inner{width:100%;padding:1rem 1rem .9rem;display:flex;flex-direction:column;gap:.9rem;flex:1;justify-content:space-between}
+.nav h3{margin-top:0}
+.nav .ds{display:flex;justify-content:space-between;align-items:center;border-top:1px dashed var(--line);padding-top:.7rem}
+.nav .ds em{font-family:var(--hand);font-style:normal;font-size:1.2rem;white-space:nowrap;color:var(--wine)}
+.dh{position:relative}
+.dh::after{content:"";position:absolute;left:0;right:0;bottom:-7px;height:6px;background:radial-gradient(circle at 5px 6px,var(--bg) 3px,transparent 3.5px) 0 0/10px 6px repeat-x}
+.dh .n::before{content:"℞ Жор № "}
+.dh .n:empty::before{content:"℞ Өнөөдрийн тун"}
+.next{border-style:dashed;border-color:var(--rose)}
+@media (max-width:640px){
+  .sheet{padding:2.2rem 1.1rem 1.3rem;transform:rotate(-.8deg)}
+  .fh-t{font-size:2.4rem}
+  .fld2{grid-template-columns:1fr;gap:0}
+  .bigrx{font-size:3rem}
+  .rps li{grid-template-columns:2.2rem 1fr}
+  .rps em{font-size:1.3rem}.rps em.ds{font-size:1.15rem}
+  .d1{right:-8px}
+}
+
+/* FLIP */
+.flip{cursor:pointer;-webkit-tap-highlight-color:transparent;touch-action:pan-y;outline:none;perspective:2200px;max-width:560px;width:100%;margin:1rem auto 0;position:relative}
+.flip-in{display:grid;transition:transform .72s cubic-bezier(.2,.72,.18,1);transform-style:preserve-3d;transform-origin:center center;will-change:transform;transform:rotateY(0deg)}
+.flip:focus-visible .flip-in{outline:2px solid var(--rose);outline-offset:6px}
+.flip:hover .front{box-shadow:0 2px 0 var(--line),0 30px 60px -28px rgba(126,42,64,.45)}
+.flip.on .flip-in{transform:rotateY(-180deg)}
+.face{grid-area:1/1;backface-visibility:hidden;-webkit-backface-visibility:hidden;margin:0!important;max-width:none!important;transform:rotate(-1.2deg);transform-origin:center center;box-shadow:0 2px 0 var(--line),0 24px 50px -28px rgba(126,42,64,.35)}
+.back{transform:rotateY(180deg) rotate(1.2deg)!important;background:var(--paper);display:flex;flex-direction:column}
+.back::before{top:auto;bottom:0;border-bottom:0;border-top:1px dashed var(--rose);background:radial-gradient(circle at 6px 12px,var(--bg) 4px,transparent 4.5px) 0 0/12px 12px repeat-x}
+.bt2{font-size:2.2rem!important;letter-spacing:.12em!important}
+.bk{margin-top:1.3rem}
+.fxl{list-style:none;margin-top:.4rem}
+.fxl li{display:flex;justify-content:space-between;align-items:baseline;gap:.8rem;padding:.45rem 0;border-bottom:1px dotted var(--muted)}
+.fxl em{font-family:var(--hand);font-style:normal;font-size:1.45rem;line-height:1.15;color:var(--ink)}
+.fxl span{font-family:var(--mono);font-size:.68rem;color:var(--wine);border:1px solid var(--rose);border-radius:99px;padding:0 .5rem;white-space:nowrap}
+.cure{background:var(--pale);border-radius:8px;padding:1rem 1.1rem}
+.bk.cure p{font-family:var(--serif);font-style:italic;font-weight:600;font-size:1.6rem;line-height:1.2;color:var(--wine);margin-top:.3rem}
+.bk.two{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.bk p{font-size:.88rem;margin-top:.2rem}
+.bk p.hand{font-family:var(--hand);font-size:1.45rem;line-height:1.2;color:var(--wine)}
+.turn{display:block;margin:1.1rem auto 0;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--wine);border:1px solid var(--rose);border-radius:99px;padding:.5rem 1rem;background:var(--paper)}
+.back .turn{margin-top:auto;padding-top:.5rem}
+.back .bk:last-of-type{margin-bottom:.6rem}
+@media (max-width:640px){.face{transform:rotate(-.8deg)}.back{transform:rotateY(180deg) rotate(.8deg)!important}.bk.two{grid-template-columns:1fr}.fxl em{font-size:1.25rem}}
+@media (prefers-reduced-motion:reduce){.flip-in{transition:none}}
+
+/* BLISTER */
+.bls{padding:4rem 0 1rem}
+.blsub{font-size:.9rem;color:var(--muted);margin:-1.4rem 0 1.4rem}
+.foil{background:linear-gradient(135deg,#EFE7E8,#D9CDD0 55%,#EDE4E6);border-radius:14px;padding:1.2rem 1rem;box-shadow:inset 0 0 0 1px rgba(255,255,255,.6),var(--shadow);position:relative}
+:root[data-theme="dark"] .foil{background:linear-gradient(135deg,#3A2D31,#2A2023 55%,#3A2D31)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .foil{background:linear-gradient(135deg,#3A2D31,#2A2023 55%,#3A2D31)}}
+.mon{position:relative}
+.mon+.mon{margin-top:1rem;padding-top:1rem;border-top:1.5px dashed rgba(126,42,64,.35)}
+.mon+.mon::before{content:"✂";position:absolute;left:-.3rem;top:-.72rem;font-size:.8rem;color:var(--rose)}
+.mon .ml{display:flex;justify-content:space-between;font-family:var(--mono);font-size:.68rem;color:var(--wine);margin-bottom:.5rem;letter-spacing:.06em}
+.cells{display:grid;grid-template-columns:repeat(10,1fr);gap:.55rem}
+.cell{aspect-ratio:1;border-radius:50%;position:relative;padding:0;display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,rgba(255,255,255,.95),rgba(255,255,255,.35) 45%,rgba(126,42,64,.08) 100%);box-shadow:inset 0 -2px 3px rgba(126,42,64,.12),0 1px 1px rgba(255,255,255,.7);transition:transform .2s}
+.cell:not(.locked):hover{transform:translateY(-1px)}
+.cell .pl{width:64%;height:64%;border-radius:50%;background:linear-gradient(135deg,#fff 0 49%,var(--rose) 51%);box-shadow:0 1px 2px rgba(126,42,64,.35);position:relative}
+.cell .pl::after{content:"";position:absolute;left:18%;right:18%;top:50%;height:1px;background:rgba(126,42,64,.25);transform:rotate(-45deg)}
+.cell .dn{position:absolute;bottom:-1.05rem;font-family:var(--mono);font-size:.5rem;color:var(--muted);opacity:0}
+.cell.today{box-shadow:0 0 0 2px var(--wine),inset 0 -2px 3px rgba(126,42,64,.12)}
+.cell.today .dn{opacity:1;color:var(--wine)}
+.cell.today::before{content:"";position:absolute;inset:-5px;border-radius:50%;border:1px solid var(--wine);animation:pulse 1.8s ease-out infinite}
+@keyframes pulse{from{transform:scale(.9);opacity:.8}to{transform:scale(1.35);opacity:0}}
+.cell.locked{cursor:default}
+.cell.locked .pl{filter:saturate(.6);opacity:.85}
+.cell.pop{background:radial-gradient(circle,rgba(126,42,64,.06),rgba(126,42,64,.14));box-shadow:inset 0 1px 3px rgba(46,31,36,.25)}
+.cell.pop::after{content:"";position:absolute;inset:8%;border-radius:50%;border:1px dashed rgba(126,42,64,.35)}
+.cell.pop .pl{display:none}
+.cell .fill{position:absolute;inset:28%;border-radius:50%;background:var(--wine);opacity:var(--o,0);display:none}
+.cell.pop .fill{display:block}
+.fly{position:fixed;width:18px;height:18px;border-radius:50%;background:linear-gradient(135deg,#fff 0 49%,var(--rose) 51%);box-shadow:0 2px 4px rgba(126,42,64,.4);pointer-events:none;z-index:30;animation:fly .28s cubic-bezier(.2,.7,.3,1) forwards}
+@keyframes fly{0%{transform:translate(0,0) scale(1) rotate(0)}40%{transform:translate(0,-34px) scale(1.4) rotate(160deg)}100%{transform:translate(0,-10px) scale(.2) rotate(320deg);opacity:0}}
+.cell.shake{animation:shake .35s}
+@keyframes shake{25%{transform:translateX(-3px)}75%{transform:translateX(3px)}}
+.toast{position:fixed;left:50%;bottom:calc(1.4rem + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);background:var(--ink);color:var(--bg);font-size:.82rem;padding:.6rem 1rem;border-radius:99px;opacity:0;transition:opacity .3s,transform .3s;z-index:25;white-space:nowrap}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.bleg{display:flex;flex-wrap:wrap;gap:.3rem 1rem;justify-content:flex-end;white-space:nowrap;font-family:var(--mono);font-size:.64rem;color:var(--muted);margin-top:.8rem}
+@media (max-width:640px){.cells{gap:.4rem}.foil{padding:1rem .75rem}}
+@media (prefers-reduced-motion:reduce){.cell.today::before,.fly{animation:none}}
+
+.cell.payc::after{content:"₮";position:absolute;top:-.35rem;right:-.3rem;width:.85rem;height:.85rem;border-radius:50%;background:var(--wine);color:#fff;font-size:.5rem;display:grid;place-items:center;border:0;inset:auto -.3rem auto auto}
+.cell.pop.payc::after{content:"₮";inset:auto -.3rem auto auto;border:0}
+.slot.pay{background:var(--pale);border-radius:var(--r);padding:.8rem 1rem .2rem;margin-top:1.4rem}
+
+.chip{display:inline-block;vertical-align:middle;font-family:var(--sans);font-size:.6rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--rose);color:var(--wine);border-radius:99px;padding:.05rem .5rem;margin-right:.6rem;position:relative;top:-.15rem}
+.chip.main{background:var(--wine);border-color:var(--wine);color:var(--paper)}
+.kv dd .dash-list{margin-top:-.2rem}
+.grid .nav:last-child:nth-child(odd){grid-column:1/-1}
+
+.kv{display:grid;grid-template-columns:5.5rem 1fr;gap:.5rem .8rem;font-size:.9rem}
+.kv dt{font-size:.62rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--wine);padding-top:.25rem}
+@media (max-width:640px){.kv{grid-template-columns:1fr;gap:.1rem}.kv dd{margin-bottom:.6rem}}
+
+.bk-m{border:1px solid var(--line);background:var(--paper);border-radius:var(--r);padding:.8rem 1rem .4rem;margin-bottom:.7rem}
+.bk-row{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;border-bottom:1px dotted var(--line);padding:.2rem 0}
+.bk-row:last-child{border-bottom:0}
+.bk-row .chip{flex:none;top:0;margin-right:0;min-width:5.6rem;text-align:center}
+.bk-in{flex:1;min-width:0;border:0;background:transparent;resize:none;overflow:hidden;line-height:1.15;white-space:pre-wrap;overflow-wrap:break-word;font-family:var(--hand);font-size:1.3rem;color:var(--ink);padding:.3rem 0;outline:none}
+.bk-in::placeholder{color:var(--rose)}
+.bk-row.done .bk-in{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--rose)}
+.bk-ck{width:auto;margin-left:auto;border:0;padding:.4rem 0 .4rem .4rem;flex:none}
+@media (max-width:640px){.bk-row{padding:.5rem 0}.bk-row .chip{order:0}.bk-row .bk-ck{order:1}.bk-row .bk-in{order:2;flex-basis:100%}}
+.bk-in:empty::before{content:attr(data-ph);color:var(--rose)}
+.bk-in{cursor:text;min-height:1.6rem}
+
+.ptabs{position:sticky;top:-1.6rem;z-index:2;display:flex;gap:.35rem;overflow-x:auto;scrollbar-width:none;background:var(--bg);margin:1.2rem -1.6rem 0;padding:.9rem 1.6rem .8rem;border-bottom:1px solid var(--line)}
+.ptabs::-webkit-scrollbar{display:none}
+.ptabs button{flex:none;font-size:.78rem;font-weight:500;padding:.42rem .95rem;border:1px solid var(--line);border-radius:99px;background:var(--paper);transition:background .25s,color .25s,border-color .25s}
+.ptabs button.on{background:var(--wine);border-color:var(--wine);color:var(--paper)}
+.pt{padding-top:1.4rem}
+.pt.in{animation:rise .35s ease}
+.pnote{font-size:.82rem;color:var(--muted);margin:.2rem 0 1rem}
+.rxg+.rxg{margin-top:1.4rem}
+.rxg-h{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--ink);padding-bottom:.3rem}
+.rxg-h span{font-family:var(--serif);font-weight:600;font-size:1.25rem}
+.more-l{font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--wine)}
+.rxg .row{width:100%;text-align:left;grid-template-columns:2rem 1.5fr 1fr 1fr;cursor:pointer;transition:background .2s}
+.rxg .row:hover{background:var(--pale)}
+@media (max-width:640px){.ptabs{margin:1rem -1.1rem 0;padding:.8rem 1.1rem;top:-1.6rem}.rxg .row{grid-template-columns:2rem 1fr 1fr}.rxg .row .nm{grid-column:2/-1}.rxg .row>span:nth-child(3){grid-column:2}}
+@media (max-width:640px){
+  .rxmeta{grid-template-columns:repeat(3,1fr)}
+  .rxmeta div+div{border-top:0;border-left:1px solid var(--line)}
+  .rxmeta div{padding:.55rem .6rem}.rxmeta b{font-size:.74rem}.rxmeta .lbl{font-size:.56rem;letter-spacing:.12em}
+  .ptabs{display:grid;grid-template-columns:repeat(4,1fr);gap:.3rem}
+  .ptabs button{padding:.45rem .2rem;font-size:.7rem;text-align:center}
+}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem}
+.steps div{border:1px solid var(--line);background:var(--paper);border-radius:var(--r);padding:.7rem .8rem;text-align:center}
+.steps .mono{display:block;font-size:.68rem;color:var(--wine)}
+.steps b{display:block;font-family:var(--serif);font-size:1.4rem;font-weight:600}
+.steps small{font-size:.72rem;color:var(--muted)}
+
+/* MONTHLY DOSE BOXES */
+.packs{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;margin-bottom:1rem}
+.pack{border:1px solid var(--line);border-radius:var(--r);background:var(--paper);padding:1rem;text-align:left;transition:.25s;position:relative;overflow:hidden}
+.pack::after{content:"℞";position:absolute;right:.7rem;bottom:-.45rem;font-family:var(--serif);font-size:3.4rem;color:var(--pale)}
+.pack:hover{transform:translateY(-2px);border-color:var(--rose)}
+.pack.on{background:var(--wine);color:var(--paper);border-color:var(--wine)}
+.pack.on .lbl,.pack.on .mono{color:var(--paper)}
+.pack .mono{display:block;color:var(--wine);font-size:.72rem;margin-top:.25rem}
+.pack b{display:block;font-family:var(--serif);font-size:1.35rem;font-weight:600;line-height:1.1}
+
+.pack-rx{font-family:var(--serif);font-size:2rem;color:var(--wine);line-height:1;display:block;margin-bottom:.65rem}
+.pack.on .pack-rx{color:var(--paper)}
+.pack-pills{display:grid;grid-template-columns:repeat(3,1fr);gap:.35rem;max-width:92px}
+.pack-pills i{display:block;aspect-ratio:2/1;border:1px solid var(--rose);border-radius:99px;background:linear-gradient(90deg,var(--paper) 0 49%,var(--pale) 51%)}
+.pack.on .pack-pills i{border-color:rgba(255,255,255,.6);background:linear-gradient(90deg,rgba(255,255,255,.95) 0 49%,rgba(255,255,255,.45) 51%)}
+.pack-count{position:absolute;right:.75rem;top:.7rem;color:var(--muted)!important;font-size:.65rem!important}
+.pack.on .pack-count{color:var(--paper)!important;opacity:.8}
+.monthdose{animation:rise .3s ease}
+.monthdose .cells{grid-template-columns:repeat(8,1fr)}
+@media(max-width:640px){.packs{grid-template-columns:1fr}.pack{padding:.8rem 1rem}.monthdose .cells{grid-template-columns:repeat(7,1fr)}}
+
+/* DAILY CHECK-IN */
+.checkin{margin-top:1.6rem;border-top:1px solid var(--line);padding-top:1.2rem}
+.moodbox,.dailyq{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:1rem 1.1rem}
+.dailyq{margin-top:.8rem}
+.moodtitle{font-family:var(--serif);font-size:1.25rem;font-weight:600;margin:.15rem 0 .7rem}
+.moods{display:grid;grid-template-columns:repeat(4,1fr);gap:.5rem}
+.mood{border:1px solid var(--line);border-radius:10px;padding:.65rem .3rem;background:var(--bg);font-size:1.35rem;transition:.2s}
+.mood small{display:block;font-family:var(--sans);font-size:.62rem;color:var(--muted);margin-top:.15rem}
+.mood.on{border-color:var(--wine);background:var(--pale);transform:translateY(-1px)}
+.dailyq label{display:block;font-family:var(--serif);font-style:italic;font-size:1.12rem;color:var(--wine);margin:.25rem 0 .45rem}
+.dailyq textarea{width:100%;border:0;outline:0;resize:vertical;min-height:70px;color:var(--ink);font:inherit;line-height:1.6;background:transparent repeating-linear-gradient(transparent 0 29px,var(--line) 29px 30px)}
+.qsave{font-family:var(--mono);font-size:.68rem;color:var(--muted);text-align:right;min-height:1em;margin-top:.35rem}
+.mood-month{margin:.8rem 0 1.2rem;padding:.9rem 1rem;background:var(--pale);border-radius:var(--r)}
+.moodline{display:flex;flex-wrap:wrap;gap:.28rem;margin-top:.45rem;font-size:1.05rem}
+.moodline span{width:1.55rem;height:1.55rem;display:grid;place-items:center;border-radius:50%;background:var(--paper);border:1px solid var(--line)}
+.moodsum{font-size:.78rem;color:var(--muted);margin-top:.5rem}
+
+/* V8 — clearer daily dose */
+.dose-hero{background:var(--pale);border:1px solid var(--line);border-radius:14px;padding:1rem 1.1rem;margin-bottom:1rem}
+.dose-hero-top{display:flex;justify-content:space-between;gap:1rem;align-items:flex-end}
+.dose-hero h3{font-family:var(--serif);font-size:1.55rem;line-height:1.05;margin:.18rem 0 0}
+.dose-score{font-family:var(--mono);font-size:.78rem;color:var(--wine);white-space:nowrap}
+.dose-progress{height:7px;background:var(--paper);border-radius:99px;overflow:hidden;margin-top:.8rem;border:1px solid var(--line)}
+.dose-progress i{display:block;height:100%;background:var(--wine);border-radius:inherit;transition:width .3s ease}
+.dose-grid{display:grid;gap:.8rem;margin-top:.9rem}
+.dose-card{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:.9rem 1rem}
+.dose-card.pay{background:var(--pale)}
+.dose-card-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:.15rem}
+.dose-card-head .dose-icon{width:30px;height:30px;border-radius:50%;background:var(--pale);display:grid;place-items:center;font-size:.9rem}
+.dose-card.pay .dose-icon{background:var(--paper)}
+.dose-card .task:last-child{border-bottom:0}
+.dose-card .task{padding:.68rem 0}
+.dose-bottom{display:grid;grid-template-columns:1fr;gap:.8rem;margin-top:1rem}
+.dose-bottom .moodbox,.dose-bottom .dailyq{margin:0}
+@media(max-width:640px){.dose-hero{padding:.9rem}.dose-card{padding:.8rem .9rem}.moods{gap:.35rem}.mood{padding:.55rem .2rem}.dose-hero h3{font-size:1.4rem}}
+
+
+
+/* ===== v10 DESIGN POLISH — content/typography unchanged ===== */
+:root{--r:14px;--shadow:0 1px 2px rgba(46,31,36,.035),0 16px 38px -24px rgba(126,42,64,.20)}
+body{background-image:radial-gradient(rgba(126,42,64,.025) .65px,transparent .65px);background-size:12px 12px}
+.wrap{max-width:940px;padding-left:clamp(1.1rem,3vw,1.8rem);padding-right:clamp(1.1rem,3vw,1.8rem)}
+
+/* cover: make the prescription the hero, centered and calm */
+.cover{min-height:100svh;gap:1.25rem;padding:1.8rem 0 2.8rem}
+.cv-top{opacity:.82;padding-bottom:.8rem}
+.flip{margin:clamp(1.5rem,5vh,3.4rem) auto 1rem;max-width:575px;transform:none!important;perspective:1800px}
+.flip-in{transform-origin:50% 50%}
+.sheet{max-width:575px;padding:2.55rem 2rem 1.75rem;border-radius:7px;box-shadow:0 2px 0 var(--line),0 28px 65px -38px rgba(126,42,64,.38);transform:none!important}
+.flip:hover .front{box-shadow:0 2px 0 var(--line),0 30px 68px -38px rgba(126,42,64,.42)}
+.cover-quote{justify-content:center;text-align:center;margin-top:.25rem}
+.cover-quote q{font-size:1.35rem;color:var(--muted)}
+
+/* section rhythm */
+.bls{padding:4.8rem 0 2.6rem}
+.dash{padding:4.6rem 0 3.6rem}
+.head{margin-bottom:1.7rem;padding-bottom:.75rem;border-bottom:1px solid var(--line)}
+.head h2{letter-spacing:-.01em}
+
+/* daily dose: cleaner visual hierarchy */
+.foil{padding:1.35rem 1.2rem 1.55rem;border-radius:18px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.55),0 18px 40px -30px rgba(46,31,36,.34)}
+.mon+.mon{margin-top:1.25rem;padding-top:1.25rem}
+.mon .ml{margin-bottom:.7rem;font-size:.66rem}
+.cells{gap:.68rem}
+.cell{box-shadow:inset 0 -2px 3px rgba(126,42,64,.10),0 2px 5px rgba(46,31,36,.05)}
+.bleg{margin-top:1.15rem;padding-top:.75rem;border-top:1px solid rgba(126,42,64,.12)}
+
+/* cards: one consistent language */
+.grid{gap:1rem}
+.nav{border-radius:14px;box-shadow:0 10px 30px -25px rgba(46,31,36,.30);transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease}
+.nav:hover{transform:translateY(-2px);box-shadow:0 16px 34px -26px rgba(126,42,64,.30)}
+.nav .lab{padding:.52rem 1.05rem}
+.nav .inner{padding:1.15rem 1.1rem 1rem;gap:1rem}
+.nav .ds{padding-top:.8rem}
+.next{margin-top:1.2rem;border-radius:14px;padding:1rem 1.2rem}
+
+/* drawer: more breathing room, less visual noise */
+.drawer{width:min(620px,100%)}
+.dh{padding-left:1.8rem;padding-right:1.8rem}
+.db{padding:1.9rem 1.8rem calc(3.2rem + env(safe-area-inset-bottom,0px))}
+.block+.block{margin-top:2.7rem}
+.bt{padding-bottom:.55rem;margin-bottom:.65rem}
+.acc>button{padding:1.08rem 0}
+.body .in{padding-bottom:1.4rem}
+.rxmeta,.col,.st,.note,.moodbox,.dailyq,.wk div,.pack{border-radius:12px;box-shadow:0 8px 24px -24px rgba(46,31,36,.28)}
+.ptabs{padding-top:1rem;padding-bottom:.9rem}
+.ptabs button{transition:background .2s,color .2s,border-color .2s;box-shadow:none}
+
+/* task rows: clearer scan line without adding content */
+.task{padding:.88rem .15rem;gap:1rem}
+.task:hover{background:linear-gradient(90deg,transparent,var(--pale),transparent)}
+.box{width:21px;height:21px;border-radius:6px}
+.slot+.slot{margin-top:1.7rem}
+.sum{padding-top:.25rem}
+
+/* reduce decorative motion; keep flip/drawer/check interactions */
+.nav:hover .arr{background:transparent;color:var(--wine);border-color:var(--rose)}
+.pack:hover{transform:none}
+.cell:not(.locked):hover{transform:none}
+@media (hover:hover){.task:hover{padding-left:.35rem;padding-right:.35rem}}
+
+/* mobile: calmer single-column reading where it matters */
+@media (max-width:640px){
+  .wrap{padding-left:1rem;padding-right:1rem}
+  .cover{padding-top:1.2rem;gap:1rem}
+  .flip{margin:1.35rem auto .8rem}
+  .sheet{padding:2.25rem 1.15rem 1.35rem}
+  .cover-quote{margin-top:.15rem}
+  .bls{padding-top:3.6rem}
+  .dash{padding-top:3.7rem}
+  .grid{grid-template-columns:1fr;gap:.85rem}
+  .grid .nav:last-child:nth-child(odd){grid-column:auto}
+  .nav .inner{padding:1rem}
+  .foil{padding:1.05rem .85rem 1.3rem;border-radius:15px}
+  .cells{gap:.46rem}
+  .dh{padding-left:1.2rem;padding-right:1.2rem}
+  .db{padding-left:1.2rem;padding-right:1.2rem}
+  .head{align-items:center;margin-bottom:1.35rem}
+}
+
+/* v13 — MONTH BOX + DAILY DOSE REDESIGN */
+.packs{gap:1rem;margin:0 0 1.35rem}
+.pack{min-height:138px;padding:1rem 1rem .9rem;border-radius:7px;border:1px solid var(--line);background:linear-gradient(155deg,var(--paper) 0 72%,var(--pale) 72% 100%);box-shadow:0 10px 26px -22px rgba(46,31,36,.45);overflow:hidden}
+.pack::before{content:"90 DAY COURSE";display:block;font-family:var(--mono);font-size:.52rem;letter-spacing:.16em;color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:.45rem;margin-bottom:.65rem}
+.pack::after{content:"℞";right:.55rem;bottom:-.75rem;font-size:4.5rem;color:var(--pale);opacity:.8}
+.pack-rx{font-size:1.45rem;margin:0 0 .25rem}
+.pack b{font-size:1.55rem;letter-spacing:-.01em}
+.pack .mono{font-size:.67rem}
+.pack-pills{display:flex;gap:.28rem;margin-top:.65rem;max-width:none}
+.pack-pills i{width:22px;height:9px;aspect-ratio:auto;border-radius:2px;background:var(--pale);border:1px solid var(--rose);transform:skewX(-12deg)}
+.pack-count{top:.95rem;right:.8rem}
+.pack.on{background:var(--wine);box-shadow:0 14px 32px -20px rgba(126,42,64,.75)}
+.pack.on::before{color:rgba(255,255,255,.72);border-color:rgba(255,255,255,.22)}
+.pack.on::after{color:rgba(255,255,255,.08)}
+.pack.on .pack-pills i{background:rgba(255,255,255,.13);border-color:rgba(255,255,255,.48)}
+
+.foil{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:1rem;box-shadow:var(--shadow);position:relative}
+.foil::before{content:"DAILY DOSE · 90 DAYS";display:block;font-family:var(--mono);font-size:.58rem;letter-spacing:.18em;color:var(--muted);padding:.05rem .15rem .75rem;border-bottom:1px solid var(--line);margin-bottom:.85rem}
+.mon+.mon{margin-top:1rem;padding-top:1rem;border-top:1px dashed var(--rose)}
+.mon+.mon::before{display:none}
+.mon .ml{font-size:.67rem;margin-bottom:.65rem}
+.cells{grid-template-columns:repeat(10,1fr);gap:.48rem}
+.cell{aspect-ratio:1;border-radius:7px;border:1px solid var(--line);background:var(--bg);box-shadow:none;overflow:visible}
+.cell .pl{width:58%;height:34%;border-radius:99px;background:linear-gradient(90deg,var(--paper) 0 49%,var(--rose) 50% 100%);border:1px solid var(--rose);box-shadow:0 2px 4px rgba(126,42,64,.12);transform:rotate(-8deg)}
+.cell .pl::after{left:50%;right:auto;top:0;bottom:0;width:1px;height:auto;background:rgba(126,42,64,.3);transform:none}
+.cell.today{background:var(--pale);box-shadow:0 0 0 2px var(--wine);border-color:transparent}
+.cell.today::before{display:none}
+.cell.pop{background:var(--pale);box-shadow:none}
+.cell.pop::after{content:"";position:absolute;inset:18%;display:block;border:1px dashed var(--rose);border-radius:50%;opacity:.55}
+.cell.pop .fill{display:none}
+.cell.payc::after,.cell.pop.payc::after{content:"₮";position:absolute;top:-.3rem;right:-.25rem;width:.85rem;height:.85rem;border-radius:50%;background:var(--wine);color:#fff;font-size:.5rem;display:grid;place-items:center;border:0;inset:auto -.25rem auto auto}
+.bleg{justify-content:flex-start;border-top:1px solid var(--line);padding-top:.75rem;margin-top:1rem}
+@media(max-width:640px){.packs{grid-template-columns:1fr;gap:.65rem}.pack{min-height:112px}.cells{grid-template-columns:repeat(7,1fr);gap:.42rem}.foil{padding:.85rem .7rem}}
+
+
+/* v15: remove center line from dose pills */
+.monthdose .cell .pl::after{display:none!important;content:none!important;}
+
+/* v16 — slightly larger prescription sheet + typography */
+.flip{max-width:630px;}
+.sheet{max-width:630px;padding:2.65rem 2.05rem 1.85rem;}
+.fh-t{font-size:3.3rem;}
+.fh-s{font-size:.68rem;}
+.fld span{font-size:.78rem;}
+.fld em{font-size:1.72rem;}
+.bigrx{font-size:4.55rem;}
+.rps .k{font-size:1rem;}
+.rps em{font-size:1.66rem;}
+.rps em.ds{font-size:1.43rem;}
+.cover .track-top .mono{font-size:.88rem;}
+.warn{font-size:.78rem;}
+.sig{font-size:2.28rem!important;}
+@media (max-width:640px){
+  .flip{max-width:100%;}
+  .sheet{max-width:100%;padding:2.35rem 1.25rem 1.45rem;}
+  .fh-t{font-size:2.65rem;}
+  .fld em{font-size:1.48rem;}
+  .bigrx{font-size:3.25rem;}
+  .rps em{font-size:1.42rem;}
+  .rps em.ds{font-size:1.25rem;}
+}
+
+</style>
+
+<style>
+/* v11 cover flip fix: keep the prescription visible and centered */
+.flip{position:relative;perspective:1800px;transform:none!important;}
+.flip-in{display:grid;transform-style:preserve-3d;transform:rotateY(0deg);transform-origin:center center;}
+.flip.on .flip-in{transform:rotateY(-180deg);}
+.sheet.face{grid-area:1/1;margin:0!important;max-width:575px!important;width:100%;backface-visibility:hidden;-webkit-backface-visibility:hidden;}
+.sheet.face.front{transform:rotateY(0deg)!important;}
+.sheet.face.back{transform:rotateY(180deg)!important;}
+@media (max-width:640px){
+  .sheet.face.front{transform:rotateY(0deg)!important;}
+  .sheet.face.back{transform:rotateY(180deg)!important;}
+}
+</style>
+
+<style>
+/* v12 — Өдрийн тунг жинхэнэ эмийн хайрцаг / blister pack шиг харагдуулах */
+#bls{position:relative}
+#bls>.head{border-bottom:0;margin-bottom:.45rem;padding-bottom:0}
+#bls>.blsub{margin:.15rem 0 1.35rem;max-width:620px}
+#bls>#foil{background:transparent!important;box-shadow:none!important;padding:0!important;border-radius:0!important}
+.packs{gap:.65rem;margin-bottom:1.15rem}
+.pack{min-height:112px;border:1px solid var(--line);border-radius:12px;background:var(--paper);box-shadow:0 8px 22px -20px rgba(46,31,36,.3);padding:.9rem;overflow:hidden}
+.pack.on{background:var(--wine);border-color:var(--wine);box-shadow:0 14px 28px -22px rgba(126,42,64,.55)}
+.pack-rx{font-size:1.65rem;margin-bottom:.45rem}
+.pack-pills{max-width:76px;gap:.28rem}
+.pack-count{top:.65rem;right:.7rem}
+.monthdose>.foil{position:relative;background:linear-gradient(145deg,#f2eeee 0%,#d8d0d2 46%,#f7f3f3 100%)!important;border:1px solid rgba(126,42,64,.16);border-radius:18px!important;padding:1.3rem 1.15rem 1.45rem!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.9),inset 0 -1px 0 rgba(126,42,64,.08),0 16px 34px -25px rgba(46,31,36,.38)!important;overflow:hidden}
+.monthdose>.foil::before{content:"DAILY DOSE · 90 DAYS";display:block;font-family:var(--mono);font-size:.6rem;letter-spacing:.16em;color:rgba(126,42,64,.7);padding:0 .15rem .8rem;border-bottom:1px dashed rgba(126,42,64,.22);margin-bottom:1rem}
+.monthdose>.foil::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(115deg,rgba(255,255,255,.32),transparent 28%,transparent 70%,rgba(255,255,255,.18));mix-blend-mode:screen}
+.monthdose .cells{grid-template-columns:repeat(7,1fr);gap:.72rem .62rem;position:relative;z-index:1}
+.monthdose .cell{aspect-ratio:1/1.08;border:1px solid rgba(126,42,64,.16);background:radial-gradient(circle at 36% 28%,#fff 0%,#f9f6f6 27%,#e9e1e3 62%,#d7cccf 100%);box-shadow:inset 1px 1px 1px rgba(255,255,255,.95),inset -2px -3px 5px rgba(126,42,64,.11),0 2px 3px rgba(46,31,36,.08);border-radius:50%;overflow:visible}
+.monthdose .cell .pl{width:58%;height:58%;background:linear-gradient(135deg,#fff 0 48%,#c99aa5 50% 100%);box-shadow:0 2px 4px rgba(126,42,64,.25)}
+.monthdose .cell .dn{opacity:1;bottom:-1rem;font-size:.52rem;color:var(--muted)}
+.monthdose .cell.today{box-shadow:0 0 0 2px var(--wine),inset 1px 1px 1px rgba(255,255,255,.95),inset -2px -3px 5px rgba(126,42,64,.11)}
+.monthdose .cell.pop{background:radial-gradient(circle,#d8d0d2 0,#c8bec1 72%,#bdb1b5 100%);box-shadow:inset 0 3px 7px rgba(46,31,36,.22)}
+.monthdose .cell.pop::before{content:"";position:absolute;inset:18%;border-radius:50%;border:1px dashed rgba(126,42,64,.38)}
+.monthdose .bleg{position:relative;z-index:1;margin-top:1.5rem;padding-top:.8rem;justify-content:flex-start}
+@media(max-width:640px){
+ .packs{grid-template-columns:repeat(3,1fr);gap:.4rem}
+ .pack{min-height:96px;padding:.7rem .6rem}
+ .pack-pills{max-width:58px;gap:.2rem}.pack-rx{font-size:1.4rem}.pack b{font-size:1.05rem}
+ .monthdose>.foil{padding:1rem .72rem 1.3rem!important}
+ .monthdose .cells{grid-template-columns:repeat(7,1fr);gap:.62rem .35rem}
+ .monthdose .cell .dn{bottom:-.85rem}
+}
+</style>
+
+</head>
+<body>
+
+<div class="wrap">
+<header class="cover">
+  <div class="cv-top"><span class="lbl">Оюундарь · Хөгжил 90</span><span class="lbl">Өөртөө бичсэн жор</span></div>
+  <div class="flip" id="flip" role="button" tabindex="0" aria-label="Жорын цаасыг эргүүлж ар талыг харах"><div class="flip-in"><div class="sheet face front">
+    <span class="tape"></span>
+    <svg class="doodle d1" viewBox="0 0 40 20"><rect x="1" y="1" width="38" height="18" rx="9"/><path d="M20 1v18"/></svg>
+    <svg class="doodle d2" viewBox="0 0 24 22"><path d="M12 20S2 13.5 2 7.5A5 5 0 0 1 12 5a5 5 0 0 1 10 2.5C22 13.5 12 20 12 20z"/></svg>
+    <div class="fh">
+      <div><div class="fh-s">Маягт № ХХ-90 · Хувь хүний хөгжил</div><div class="fh-t">ЖОР</div></div>
+      <div class="serial"><span class="mono">№ 0090</span><span class="bc"></span></div>
+    </div>
+    <div class="fld"><span>Өвчтөний нэр</span><em>Оюундарь</em></div>
+    <div class="fld2"><div class="fld"><span>Онош</span><em>Өсөх хүсэл их ♡</em></div><div class="fld"><span>Огноо</span><em>2026.10.01</em></div></div>
+    <div class="fld2"><div class="fld"><span>Эмчилгээний хугацаа</span><em>90 хоног</em></div><div class="fld"><span>Жор №</span><em>90</em></div></div>
+    <div class="rpbox">
+      <div class="bigrx">℞</div>
+      <ol class="rps">
+        <li><span class="k">Rp.:</span><em>Шинэ мэдлэг, ур чадвар</em><span class="k">D.S.</span><em class="ds">өдөр бүр бага багаар</em></li>
+        <li><span class="k">Rp.:</span><em>Эрүүл дадал</em><span class="k">D.S.</span><em class="ds">өглөө, орой тогтмол</em></li>
+        <li><span class="k">Rp.:</span><em>Өөртөө цаг, итгэл</em><span class="k">D.S.</span><em class="ds">жижиг амлалтаа өдөр бүр биелүүлэх</em></li>
+        <li><span class="k">Rp.:</span><em>Санхүүгийн сахилга</em><span class="k">D.S.</span><em class="ds">хадгаламж, төсөв, зарлагаа хянах</em></li>
+      </ol>
+    </div>
+    <div class="use">
+      <div class="track-top"><span class="mono" id="dayLbl">DAY 01 / 90</span><span class="lbl" id="dayNote"></span></div>
+      <div class="bar"><i id="dayBar"></i></div>
+    </div>
+    <div class="signrow">
+      <div class="fld sg"><span>Жор бичсэн эм зүйч</span><em class="sig">Оюундарь</em></div>
+      <svg class="stamp" viewBox="0 0 120 120" aria-hidden="true">
+        <circle cx="60" cy="60" r="56" fill="none" stroke="currentColor" stroke-width="2"/>
+        <circle cx="60" cy="60" r="40" fill="none" stroke="currentColor" stroke-width="1"/>
+        <defs><path id="sc" d="M60,60 m-48,0 a48,48 0 1,1 96,0 a48,48 0 1,1 -96,0"/></defs>
+        <text font-size="9.5" letter-spacing="2" font-weight="600" fill="currentColor" font-family="Montserrat,Arial,sans-serif"><textPath href="#sc">ЭМ ЗҮЙЧ • ХӨГЖИЛ 90 • БАТЛАВ •</textPath></text>
+        <text x="60" y="66" text-anchor="middle" font-size="26" font-style="italic" fill="currentColor" font-family="Cormorant Garamond,Georgia,serif">℞</text>
+        <text x="60" y="80" text-anchor="middle" font-size="8" fill="currentColor" font-family="Montserrat,Arial,sans-serif">2026</text>
+      </svg>
+    </div>
+    <p class="warn">Хэрэглэхийн өмнө доорх заавартай танилцана уу ♡</p>
+  </div>
+  <div class="sheet face back" aria-hidden="true">
+    <div class="fh"><div><div class="fh-s">Rx 090 · Ар тал</div><div class="fh-t bt2">ХАВСРАЛТ</div></div><span class="mono serial">№ 0090</span></div>
+    <div class="bk">
+      <span class="lbl">Гаж нөлөө · Possible side effects</span>
+      <ul class="fxl">
+        <li><em>Төгс хийх гэж өөрийгөө хэт шахах</em><span>байж болно</span></li>
+        <li><em>Нэг өдөр алгасахад бүхнийг орхих</em><span>байж болно</span></li>
+        <li><em>Хэт олон зүйл зэрэг эхлүүлэх</em><span>байж болно</span></li>
+      </ul>
+    </div>
+    <div class="bk cure">
+      <span class="lbl">Гаж нөлөө илэрвэл · Recommended treatment</span>
+      <p>Жижиг алхам.<br>Тогтвортой байдал.<br>Дахин эхлэх.</p>
+    </div>
+    <div class="bk two">
+      <div><span class="lbl">Анхааруулга</span><p>Бусадтай харьцуулж хэрэглэхгүй. Өөрийн хэмнэлээр.</p></div>
+      <div><span class="lbl">Хадгалах нөхцөл</span><p>Өдөр бүр, зүрхэндээ ойр хадгална ♡</p></div>
+    </div>
+    <div class="bk"><span class="lbl">Хүлээгдэх нөлөө</span><p class="hand">Өөртөө өгсөн жижиг амлалтаа биелүүлж чаддаг гэдгээ батлах.</p></div>
+  </div>
+  </div></div>
+  <div class="cover-quote"><q>Төгс биш, ахиц чухал.</q></div>
+</header>
+
+<section class="bls" id="bls">
+  <div class="head"><h2>Өдрийн тун</h2><span class="lbl mono" id="blCount">0 / 90</span></div>
+  <p class="blsub">Эмийн хайрцгаа нээгээд, тухайн өдрийн эмийг дарж өнөөдрийн төлөвлөгөөгөө хараарай.</p>
+  <div class="foil" id="foil"></div>
+  <div class="toast" id="toast" role="status"></div>
+</section>
+
+<section class="dash" id="dash">
+  <div class="head"><h2>Жорын агуулга</h2></div>
+  <div class="grid" id="grid"></div>
+</section>
+
+<footer class="fx"><div class="sig"><span class="lbl">Жор бичсэн · Эм зүйч Оюундарь</span><span class="mono">2026 · ℞ 090</span></div></footer>
+</div>
+
+<div id="shell">
+  <div class="scrim" id="scrim"></div>
+  <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="dTitle">
+    <div class="dh"><div><div class="n" id="dNum"></div><h2 id="dTitle"></h2><span class="lbl" id="dEn"></span></div><button class="x" id="dClose" aria-label="Хаах">×</button></div>
+    <div class="db" id="dBody"></div>
+  </aside>
+</div>
+
+<script>
+(function(){
+var START=new Date(2026,9,1), DAYMS=864e5;
+function ymd(d){return d.getFullYear()+"."+String(d.getMonth()+1).padStart(2,"0")+"."+String(d.getDate()).padStart(2,"0")}
+function key(d){return "od90:"+ymd(d)}
+function today(){var t=new Date();return new Date(t.getFullYear(),t.getMonth(),t.getDate())}
+function dayNum(d){return Math.floor((d-START)/DAYMS)+1}
+function get(k,f){try{var v=localStorage.getItem(k);return v?JSON.parse(v):f}catch(e){return f}}
+function set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+
+var TASKS=[["MORNING","Өглөөний тун",[["m1","06:20-д сэрэх"],["m2","Нэг аяга бүлээн ус уух"],["m3","10 минут сунгалт хийх"]]],
+           ["DAY","Өдрийн тун",[["d1","Өдрийн хамгийн чухал 3 ажлаа дуусгах"],["d2","Солонгос хэлний хичээл — 2 цаг"]]],
+           ["NIGHT","Оройн тун",[["n2","Маргаашийн хоол, хувцсаа бэлтгэх"],["n1","Өөртөө 15 минут зориулах"],["n4","Өдрийн зарлагаа 2 минутанд бүртгэх"],["n3","22:30-д унтах"]]]];
+var SAT=[["MORNING","Тайван өглөө",[["s1","08:00–09:00 хооронд тайван сэрэх"],["s2","Ус ууж, 10 минут сунгалт хийх"]]],
+         ["GROW","Хөгжлийн цаг",[["s3","Сонгосон нэг ур чадвартаа 1–2 цаг төвлөрөх"],["s4","30 минут ном унших эсвэл подкаст сонсох"]]],
+         ["RESET","Өөртөө цаг",[["s5","Өрөө, хувийн орчноо цэгцлэх"],["s6","Өөртөө дуртай зүйлдээ 1–2 цаг зориулах"]]]];
+var SUN=[["MORNING","Амралтын өглөө",[["u1","Яаралгүй сэрэж, биеэ амраах"],["u2","Хөнгөн сунгалт эсвэл алхалт хийх"]]],
+         ["REVIEW","7 хоногийн дүгнэлт",[["u3","Өнгөрсөн 7 хоногийн ахицаа 10 минут эргэн харах"],["u4","Зарлага, төсвөө шалгах"]]],
+         ["PREP","Шинэ 7 хоногийн бэлтгэл",[["u5","Ирэх 7 хоногийн 3 гол зорилгоо бичих"],["u6","Хоол, хувцас болон хэрэгтэй зүйлсээ бэлтгэх"],["u7","Орой эрт амарч, шинэ 7 хоногтоо бэлдэх"]]]];
+var PAY=["FINANCE","Санхүүгийн тун",[["p1","Орлогоосоо эхлээд хадгаламжаа тусад нь хийх"],["p2","Дараагийн 2 долоо хоногийн төсвөө гаргах"]]];
+function isPay(d){return d.getDate()===12||d.getDate()===27}
+function baseTasksFor(d){var w=d.getDay();return w===6?SAT:(w===0?SUN:TASKS)}
+function tasksFor(d){var a=baseTasksFor(d);return isPay(d)?a.concat([PAY]):a}
+function nTasks(d){var n=0;tasksFor(d).forEach(function(s){n+=s[2].length});return n}
+
+/* cover progress */
+var T=today(),dn=dayNum(T),cur=Math.max(0,Math.min(90,dn));
+document.getElementById("dayLbl").textContent="DAY "+String(cur).padStart(2,"0")+" / 90";
+document.getElementById("dayNote").textContent=dn<1?("Эхлэхэд "+(1-dn)+" өдөр"):dn>90?"Курс дууссан":"Курс үргэлжилж байна";
+setTimeout(function(){document.getElementById("dayBar").style.width=(cur/90*100)+"%"},200);
+
+/* flip */
+var fl=document.getElementById("flip"),sx=0,sy=0,swiped=false;
+function flip(){var on=fl.classList.toggle("on");fl.querySelector(".front").setAttribute("aria-hidden",on);fl.querySelector(".back").setAttribute("aria-hidden",!on)}
+fl.addEventListener("touchstart",function(e){sx=e.touches[0].clientX;sy=e.touches[0].clientY;swiped=false},{passive:true});
+fl.addEventListener("touchend",function(e){var dx=e.changedTouches[0].clientX-sx,dy=e.changedTouches[0].clientY-sy;if(Math.abs(dx)>40&&Math.abs(dx)>Math.abs(dy)){swiped=true;flip()}},{passive:true});
+fl.addEventListener("click",function(){if(swiped){swiped=false;return}flip()});
+fl.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();flip()}});
+/* blister */
+var doseDate=null,foil=document.getElementById("foil"),toastEl=document.getElementById("toast"),tt;
+function toast(m){toastEl.textContent=m;toastEl.classList.add("show");clearTimeout(tt);tt=setTimeout(function(){toastEl.classList.remove("show")},2200)}
+var MONTHPACKS=[
+  {m:10,from:1,to:31},
+  {m:11,from:32,to:61},
+  {m:12,from:62,to:90}
+];
+var activePack=(T.getMonth()+1>=10&&T.getMonth()+1<=12)?T.getMonth()+1:10;
+function drawFoil(){
+  var pop=get("od90:pop",[]),h='<div class="packs">';
+  MONTHPACKS.forEach(function(p){
+    var used=pop.filter(function(n){return n>=p.from&&n<=p.to}).length,total=p.to-p.from+1;
+    h+='<button class="pack'+(activePack===p.m?' on':'')+'" data-m="'+p.m+'" aria-label="'+p.m+'-р сарын эмийн хайрцаг"><span class="pack-rx">℞</span><span class="pack-pills" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="pack-count mono">'+used+' / '+total+'</span></button>';
+  });
+  h+='</div>';
+  var p=MONTHPACKS.filter(function(x){return x.m===activePack})[0];
+  h+='<div class="monthdose"><div class="foil"><div class="cells">';
+  for(var n=p.from;n<=p.to;n++){
+    var d=new Date(START.getTime()+(n-1)*DAYMS),v=get(key(d),[]),
+      cls=(pop.indexOf(n)>-1?" pop":"")+(n===dn?" today":"")+(n>dn?" locked":"")+(isPay(d)?" payc":"");
+    h+='<button class="cell'+cls+'" data-n="'+n+'" aria-label="'+ymd(d)+'"><span class="pl"></span><span class="fill" style="--o:'+(v.length/nTasks(d)*.9).toFixed(2)+'"></span><span class="dn">'+d.getDate()+'</span></button>';
+  }
+  h+='</div><div class="bleg"><span>◐ хүлээж буй</span><span>◌ уусан</span><span>● бүтэн тун</span><span>₮ санхүүгийн өдөр</span></div></div></div>';
+  foil.innerHTML=h;
+  document.getElementById("blCount").textContent=pop.length+" / 90";
+  foil.querySelectorAll(".pack").forEach(function(b){b.onclick=function(){activePack=+b.dataset.m;drawFoil()}});
+  foil.querySelectorAll(".cell").forEach(function(c){c.onclick=function(){
+    var n=+c.dataset.n,d=new Date(START.getTime()+(n-1)*DAYMS);
+    if(n>dn){c.classList.remove("shake");void c.offsetWidth;c.classList.add("shake");toast(ymd(d)+"-нд нээгдэнэ ♡");return}
+    var pop=get("od90:pop",[]);
+    function go(){doseDate=d;openD(2)}
+    if(pop.indexOf(n)<0){pop.push(n);set("od90:pop",pop);
+      c.classList.add("pop");document.getElementById("blCount").textContent=pop.length+" / 90";
+      go()}
+    else go();
+  }});
+}
+drawFoil();
+/* cards */
+var CARDS=[
+ ["01","Би хаана явна вэ?","Одоогийн цэг",where],
+ ["02","Миний хөгжлийн жор","Хөгжүүлэх чиглэл",presc],
+ ["","Өдрийн тун","Өнөөдрийн хийх зүйлс",dose,true],
+ ["03","Хөгжлийн замнал","Зорилгоос үр дүн рүү",course],
+ ["04","Ахиц ба дүгнэлт","Үр дүн ба дараагийн алхам",pf]];
+var SK=[
+ ["Гол","Эм зүйн мэргэжлийн мэдлэг","Эм зүйч мэргэжлийн суурь мэдлэгээ тогтмол сэргээж, мэргэжлийн түвшинд зөв тайлбарлаж чаддаг байх",["Эмийн үйлдэл ба хэрэглээ","Найрлага, тун, хэрэглэх арга","Харилцан үйлчлэл ба аюулгүй хэрэглээ"],"7 хоног бүр 1 мэргэжлийн сэдэв сонгон сэргээж, товч тэмдэглэл хийх","90 хоногийн дараа гол сэдвүүдээр өөрийн мэргэжлийн тэмдэглэлийн сантай болсон байх"],
+ ["Гол","Бүтээгдэхүүн & эрүүл мэндийн мэдлэг","Ажил дээрх бүтээгдэхүүнийг эм зүйчийн өнцгөөс ойлгомжтой, үндэслэлтэй танилцуулах",["Бүтээгдэхүүний найрлага, үйлчлэл","Хэрэглэх арга, анхааруулга","Хэнд тохирох болон бүтээгдэхүүний онцлог"],"7 хоногт 1 бүтээгдэхүүн судалж, 1 хуудас мэдээлэл бэлтгэх","90 хоногт 12 бүтээгдэхүүний мэргэжлийн мэдээллийн хуудастай болох"],
+ ["Гол","Солонгос хэл (TOPIK)","Хэлний мэдлэгээ ахиулж, цаашид суралцах, ажиллах боломжоо тэлэх",["Үгийн сан, дүрэм","Сонсох, ярих","TOPIK-ийн даалгаврын төрлүүд"],"Ажлын өдөр бүр 18:00–20:00 хичээлдээ суух. Гэр рүүгээ харих замдаа өдрийн үгсээ давтах","Сар бүр 1 жишиг тест хийж, оноогоо харьцуулах"],
+ ["Гол","Excel & Data Analysis","Борлуулалт, захиалга болон ажлын өгөгдлийг хурдан, алдаагүй боловсруулж сурах",["Pivot table, XLOOKUP","Power Query-ээр өгөгдөл цэвэрлэх","Тайлан ба dashboard"],"Амралтын өдөр 7 хоногт 1 шинэ функц сурч, ажил дээрээ шууд хэрэглэх","12-р сард сарын борлуулалтын dashboard бэлэн болсон байх"],
+ ["Туслах","AI & Digital Tools","AI болон дижитал хэрэгслийг бодит ажилдаа зөв ашиглаж, давтагддаг ажлыг хөнгөвчлөх",["AI хэрэгслийг ажилдаа ашиглах","Google Apps Script ба автоматжуулалт","Ажлын процессыг хялбарчлах"],"Сард дор хаяж 1 шинэ AI эсвэл автоматжуулалтын арга туршиж, бодит ажил дээр хэрэглэх","90 хоногт дор хаяж 3 бодит ажлын процессыг AI/дижитал хэрэгслээр сайжруулсан байх"]
+];
+function skills(el,op){if(op==null)op=0;
+  el.innerHTML='<div class="bt"><h4>Ажлын ур чадвар</h4><span class="lbl">Hard skills</span></div><div class="block" style="margin-top:.6rem"><p style="font-size:.9rem;color:var(--muted)">Одоогийн ажилдаа хэрэгтэй, цаашид өсөхөд шаардлагатай ур чадварууд. <b style="color:var(--wine);font-weight:600">Гол эм</b> нь хамгийн чухал, <b style="color:var(--wine);font-weight:600">туслах эм</b> нь дэмжих ур чадвар.</p></div>'+
+   '<div class="block">'+SK.map(function(k,i){
+     var inner='<dl class="kv"><dt>Зорилго</dt><dd>'+k[1]+'-ийн мэдлэг, чадвараа бодитоор ахиулах</dd><dt>Яагаад</dt><dd>'+k[2]+'</dd><dt>Юу хөгжүүлэх</dt><dd>'+li(k[3])+'</dd><dt>Миний тун</dt><dd>'+k[4]+'</dd><dt>90 хоногийн үр дүн</dt><dd>'+k[5]+'</dd></dl>';
+     return acc('<span class="chip'+(k[0]==="Гол"?' main':'')+'">'+k[0]+' эм</span>'+k[1],inner,i===op)}).join('')+'</div>';
+  wireAcc(el);
+}
+function pf(el){el.innerHTML='<div id="pfA"></div><div class="block" style="margin-top:2.6rem"><div class="bt"><h4>Сарын дүгнэлт</h4><span class="lbl">Follow-up</span></div><div id="pfB" style="margin-top:1rem"></div></div>';progress(el.querySelector("#pfA"));follow(el.querySelector("#pfB"))}
+var grid=document.getElementById("grid");
+function stat(i){
+  if(i===4)return "Day "+String(cur).padStart(2,"0");
+  return "";
+}
+function drawCards(){
+  grid.innerHTML=CARDS.map(function(c,i){if(c[4])return '';return '<button class="nav" data-i="'+i+'"><span class="lab"><span class="n">℞ Rp. '+c[0]+'</span><span class="stat">'+(stat(i)||'<svg class="cap" viewBox="0 0 30 14"><rect x=".7" y=".7" width="28.6" height="12.6" rx="6.3" fill="none" stroke="currentColor"/><path d="M15 .7h8.7a6.3 6.3 0 0 1 0 12.6H15z" fill="currentColor" opacity=".55"/></svg>')+'</span></span><span class="inner"><span><h3>'+c[1]+'</h3><span class="lbl">'+c[2]+'</span></span></span></button>'}).join("");
+  grid.querySelectorAll(".nav").forEach(function(b){b.onclick=function(){openD(+b.dataset.i)}});
+}
+drawCards();
+
+/* drawer */
+var shell=document.getElementById("shell"),body=document.getElementById("dBody"),last;
+function openD(i){var c=CARDS[i];last=document.activeElement;
+  document.getElementById("dNum").textContent=c[0];document.getElementById("dTitle").textContent=c[1];document.getElementById("dEn").textContent=c[2];
+  body.innerHTML="";c[3](body);body.scrollTop=0;shell.classList.add("open");document.body.style.overflow="hidden";
+  setTimeout(function(){document.getElementById("dClose").focus()},50)}
+function closeD(){shell.classList.remove("open");document.body.style.overflow="";drawCards();drawFoil();if(last)last.focus()}
+document.getElementById("dClose").onclick=closeD;document.getElementById("scrim").onclick=closeD;
+document.addEventListener("keydown",function(e){if(e.key==="Escape")closeD()});
+
+function acc(title,inner,open){return '<div class="acc'+(open?' on':'')+'"><button><span class="t">'+title+'</span><span class="plus"></span></button><div class="body"><div><div class="in">'+inner+'</div></div></div></div>'}
+function wireAcc(root){root.querySelectorAll(".acc>button").forEach(function(b){b.onclick=function(){b.parentNode.classList.toggle("on")}})}
+function li(a){return '<ul class="dash-list">'+a.map(function(x){return "<li>"+x+"</li>"}).join("")+"</ul>"}
+
+function where(el){
+  el.innerHTML='<div class="block">'+
+   acc("Давуу тал",li(["Системтэй сэтгэдэг","Шинэ зүйл сурах дуртай","Эхэлсэн зүйлээ сайжруулах сонирхолтой"]),true)+
+   acc("Хөгжүүлэх тал",li(["Өөртөө итгэх итгэл","Цагийн менежмент","Тогтвортой байдал","Эхэлсэн зүйлээ таслахгүй үргэлжлүүлэх","Залхуурлаа бага багаар даван туулах"]))+
+   acc("90 хоногийн дараа",'<p class="pull">Би өөртөө өгсөн жижиг амлалтуудаа биелүүлж чаддаг гэдгээ өөртөө баталсан байна.</p>')+'</div>';
+  wireAcc(el);
+}
+
+var ROUT={
+ m:["Өглөө","06:20–08:00",["Сэрэх","Ус уух","Өглөөний бэлтгэл"],[["06:20","Сэрэх. Сэрүүлгээ орноосоо хол тавих"],["06:25","Нэг аяга бүлээн ус"],["06:30","10 минут сунгалт, дараа нь өглөөний бэлтгэл"],["07:20","Өдрийн 3 чухал ажлаа харах"],["07:30","Ажилдаа гарах"]]],
+ d:["Өдөр","08:00–20:00",["Ажил","Солонгос хэл"],[["08:00","Ажил. Хамгийн чухал ажлаасаа эхлэх, ширээн дээрээ устай сав"],["18:00","Солонгос хэлний хичээл"],["20:00","Хичээлээ дуусгаад гэртээ харих"]]],
+ n:["Орой","20:00–22:30",["Хоол, амрах","Маргаашийн бэлтгэл","Унтах"],[["20:00","Гэртээ харих. Хүсвэл өдрийн үгсээ сонсож давтах"],["21:00","Оройн хоол, амрах. Хоолоо арай илүү хийж, маргаашийн өдрийн хоолондоо хуваах"],["22:00","Маргаашийн бэлтгэл: хоолоо саванд хийх, хувцас. 15 минут хувийн цаг"],["22:30","Утсаа хойш тавьж унтах. 7 цаг 50 минут нойр"]]]};
+var BOOKS={10:{dev:"Шинжлэх ухаанд суурилсан Супер энгийн сэтгэл судлал",fic:"Монте-Кристо гүн"},11:{},12:{}};
+function bookData(){var st=get("od90:books",{}),o={};[10,11,12].forEach(function(m){var b=st[m]||{};o[m]={dev:b.dev!=null?b.dev:(BOOKS[m].dev||""),fic:b.fic!=null?b.fic:(BOOKS[m].fic||""),devDone:!!b.devDone,ficDone:!!b.ficDone}});return o}
+function saveBook(m,k,v){var st=get("od90:books",{});st[m]=st[m]||{};st[m][k]=v;set("od90:books",st)}
+function booksBlock(el){
+  var bd=bookData();
+  el.innerHTML='<div class="bt"><h4>Номын жор</h4><span class="lbl">Reading list</span></div><p style="font-size:.85rem;color:var(--muted);margin:.4rem 0 1rem">Сар бүр 2 ном: 1 хувь хүний хөгжил, 1 уран зохиол. Уншиж дуусмагц тэмдэглээрэй.</p>'+
+   [10,11,12].map(function(m){var b=bd[m];function row(k,lab){var dn=b[k+"Done"];return '<div class="bk-row'+(dn?' done':'')+'"><span class="chip'+(k==="dev"?' main':'')+'">'+lab+'</span><div class="bk-in" contenteditable="true" role="textbox" data-m="'+m+'" data-k="'+k+'" data-ph="Номоо бичих…" aria-label="'+m+'-р сарын '+lab+' ном">'+esc(b[k])+'</div><button class="task bk-ck'+(dn?' done':'')+'" data-m="'+m+'" data-k="'+k+'" aria-label="Уншиж дууссан"><span class="box"><svg viewBox="0 0 12 12"><path d="M2 6.5l2.5 2.5L10 3.5"/></svg></span></button></div>'}
+     return '<div class="bk-m"><span class="lbl mono" style="color:var(--wine)">'+m+'-р сар</span>'+row("dev","Хувь хөгжил")+row("fic","Уран зохиол")+'</div>'}).join("");
+  el.querySelectorAll(".bk-in").forEach(function(t){t.oninput=function(){saveBook(t.dataset.m,t.dataset.k,t.textContent)};t.onkeydown=function(e){if(e.key==="Enter"){e.preventDefault();t.blur()}};t.onpaste=function(e){e.preventDefault();document.execCommand("insertText",false,(e.clipboardData||window.clipboardData).getData("text").replace(/\s+/g," "))}});
+  el.querySelectorAll(".bk-ck").forEach(function(b){b.onclick=function(){var k=b.dataset.k+"Done",on=!b.classList.contains("done");saveBook(b.dataset.m,k,on);b.classList.toggle("done",on);b.parentNode.classList.toggle("done",on)}});
+}
+var FIN=[["Хадгаламж","Орлого орох бүрт эхлээд хадгаламжаа тусад нь хийх. Үлдсэнээрээ амьдрах"],["Төсөв","2 долоо хоног бүр зардлаа урьдчилан төлөвлөх"],["Зарлага бүртгэх","Орой бүр 2 минут зарцуулж, өдрийн зардлаа тэмдэглэх"],["Хоолны зардал","Хоолоо авчирч, гадуур хоолны зардлаа багасгах"],["Нөөц сан","Гэнэтийн зардалд зориулсан тусдаа нөөц бүрдүүлэх"],["24 цагийн дүрэм","Төлөвлөөгүй худалдан авалтыг 24 цаг хойшлуулж бодох"],["Санхүүгийн мэдлэг","Сард 1 ном эсвэл подкаастаар санхүүгийн мэдлэгээ нэмэх"]];
+var RXG=[
+ ["Ур чадвар","skills",[["Эм зүйн мэргэжлийн мэдлэг","1 сэдэв","7 хоног бүр",0],["Бүтээгдэхүүн & эрүүл мэндийн мэдлэг","1 бүтээгдэхүүн","7 хоног бүр",1],["Солонгос хэл (TOPIK)","2 цаг","Ажлын өдөр",2],["Excel & Data Analysis","1 шинэ чадвар","Амралтын өдөр",3],["AI & Digital Tools","1 шинэ арга","Сар бүр",4]]],
+ ["Дадал","habits",[["06:20 сэрэх · 22:30 унтах","7 цаг 50 мин","Өдөр бүр","rt"],["Ном: хувь хөгжил + уран зохиол","Сард 2 ном","Тусдаа зорилго","bk"],["Өдрийн хоол авчрах","1 → 3 → 5 өдөр","7 хоног бүр","food"],["Өөртөө цаг","15–30 мин","Өдөр бүр","rt"]]],
+ ["Санхүү","fin",[["Хадгаламж, төсөв","Орлого бүрээс","Сард 2 удаа",0],["Зарлага бүртгэх","2 минут","Өдөр бүр",2]]]];
+var PT=[["rx","Жор"],["skills","Ур чадвар"],["habits","Дадал"],["fin","Санхүү"]];
+function presc(el){
+  el.innerHTML='<div class="rxmeta"><div><span class="lbl">Нэр</span><b>Оюундарь</b></div><div><span class="lbl">Чиглэл</span><b>Хувь хүний хөгжил</b></div><div><span class="lbl">Хугацаа</span><b>90 хоног</b></div></div>'+
+   '<nav class="ptabs" role="tablist">'+PT.map(function(t){return '<button role="tab" data-t="'+t[0]+'">'+t[1]+'</button>'}).join("")+'</nav><div id="pt" class="pt"></div>';
+  var pt=el.querySelector("#pt"),db=document.getElementById("dBody");
+  function show(k,scroll,a){
+    el.querySelectorAll(".ptabs button").forEach(function(b){var on=b.dataset.t===k;b.classList.toggle("on",on);b.setAttribute("aria-selected",on)});
+    pt.innerHTML="";pt.classList.remove("in");void pt.offsetWidth;pt.classList.add("in");
+    var na=(a!=null&&a!==""&&!isNaN(a))?+a:null;
+    ({rx:rx,skills:function(c){skills(c,na==null?0:na)},habits:habits,fin:function(c){fin(c,na==null?0:na)}})[k](pt);
+    var tb=el.querySelector(".ptabs"),target=null;
+    if(na!=null)target=pt.querySelectorAll(".acc")[na];else if(a)target=pt.querySelector("#"+a);
+    if(target)setTimeout(function(){db.scrollTop=target.offsetTop-tb.offsetHeight-12},30);
+    else if(scroll)db.scrollTop=Math.min(db.scrollTop,tb.offsetTop-8);
+  }
+  function habits(c){
+    c.innerHTML='<div id="rt"></div><div class="block" id="bk"></div><div class="block" id="food"><div class="bt"><h4>Өдрийн хоол</h4><span class="lbl">Meal prep</span></div><p class="pnote">Залхуурахгүйн тулд бага багаар нэмнэ. Оройн хоолоо арай илүү хийж, 22:00-д маргаашийнхаа саванд хийнэ.</p><div class="steps"><div><span class="mono">10-р сар</span><b>1 өдөр</b><small>7 хоногт</small></div><div><span class="mono">11-р сар</span><b>2–3 өдөр</b><small>7 хоногт</small></div><div><span class="mono">12-р сар</span><b>3–5 өдөр</b><small>7 хоногт</small></div></div></div>';
+    routine(c.querySelector("#rt"));booksBlock(c.querySelector("#bk"));
+  }
+  function rx(c){
+    var n=0;
+    c.innerHTML='<p class="pnote">Мөр дээр дарж дэлгэрэнгүйг харна уу.</p>'+RXG.map(function(g){
+      return '<div class="rxg"><div class="rxg-h"><span>'+g[0]+'</span><button class="more-l" data-t="'+g[1]+'">Дэлгэрэнгүй →</button></div>'+
+       g[2].map(function(r){n++;return '<button class="row" data-t="'+g[1]+'" data-a="'+r[3]+'"><span class="i">'+String(n).padStart(2,"0")+'</span><span class="nm">'+r[0]+'</span><span>'+r[1]+'</span><span>'+r[2]+'</span></button>'}).join("")+'</div>'}).join("");
+    c.querySelectorAll("[data-t]").forEach(function(b){b.onclick=function(){show(b.dataset.t,true,b.dataset.a)}});
+  }
+  function routine(c){
+    c.innerHTML='<div class="bt"><h4>Хэрэглэх заавар</h4><span class="lbl">Directions for use</span></div><p class="pnote">Цаг дээр дарж дэлгэрэнгүй дэглэмийг харна уу.</p><div class="cols3">'+
+     ["m","d","n"].map(function(k){var r=ROUT[k];return '<button class="col" data-k="'+k+'"><span class="t">'+r[0]+'</span><div class="tm">'+r[1]+'</div><ul>'+r[2].map(function(x){return "<li>"+x+"</li>"}).join("")+'</ul><span class="go">Дэглэм →</span></button>'}).join("")+
+     '</div><div class="routine" id="rout"></div>';
+    var box=c.querySelector("#rout");
+    c.querySelectorAll(".col").forEach(function(b){b.onclick=function(){
+      var on=b.classList.contains("on");c.querySelectorAll(".col").forEach(function(x){x.classList.remove("on")});
+      if(on){box.classList.remove("show");return}
+      b.classList.add("on");var r=ROUT[b.dataset.k];if(window.innerWidth<=640)b.after(box);else b.parentNode.after(box);
+      box.innerHTML='<span class="lbl">'+r[0]+' · Routine</span>'+r[3].map(function(x){return '<div class="r"><span>'+x[0]+'</span><span>'+x[1]+'</span></div>'}).join("");
+      box.classList.remove("show");void box.offsetWidth;box.classList.add("show");
+    }});
+  }
+  function fin(c,op){
+    c.innerHTML='<div class="bt"><h4>Санхүүгийн сахилга</h4><span class="lbl">Financial discipline</span></div>'+FIN.map(function(f,i){return acc(f[0],'<p style="font-size:.9rem">'+f[1]+'</p>',i===op)}).join('');
+    wireAcc(c);
+  }
+  el.querySelectorAll(".ptabs button").forEach(function(b){b.onclick=function(){show(b.dataset.t,true)}});
+  show("rx");
+}
+var DAILY_Q=["Өнөөдөр юугаараа бахархав?","Өнөөдөр юу шинээр сурсан бэ?","Юуг маргааш илүү сайн хийх вэ?","Өнөөдрийн хамгийн сайн шийдвэр юу байсан бэ?","Өнөөдөр өөртөө өгсөн ямар амлалтаа биелүүлэв?","Юу хамгийн их эрч хүч өгсөн бэ?","Өнөөдөр юу хэцүү байсан, би яаж давсан бэ?","Өнөөдрийн нэг жижиг ахиц юу байв?","Маргааш юунд илүү төвлөрөх вэ?","Өнөөдрөөс авч үлдэх нэг зүйл юу вэ?"];
+var MOODS=[{v:"tired",e:"😴",t:"Ядарсан"},{v:"okay",e:"😐",t:"Тайван"},{v:"good",e:"🙂",t:"Сайн"},{v:"fire",e:"🔥",t:"Эрч хүчтэй"}];
+function moodKey(d){return "od90:mood:"+ymd(d)}
+function qKey(d){return "od90:dq:"+ymd(d)}
+function clampDay(d){var n=dayNum(d);if(n<1)return new Date(START);if(n>90)return new Date(START.getTime()+89*DAYMS);return d}
+function dose(el){
+  var d=doseDate||clampDay(T);doseDate=null;
+  function render(){
+    var done=get(key(d),[]),n=dayNum(d),mv=get(moodKey(d),""),qv=get(qKey(d),""),qi=(n-1)%DAILY_Q.length,total=nTasks(d),pct=Math.round(done.length/total*100);
+    var icons={MORNING:"☀",DAY:"✓",NIGHT:"☾",GROW:"↗",RESET:"♡",REVIEW:"↺",PREP:"→",FINANCE:"₮"};
+    var taskCards=tasksFor(d).map(function(sec){
+      return '<div class="dose-card'+(sec[0]==="FINANCE"?' pay':'')+'"><div class="dose-card-head"><div><span class="lbl">'+sec[0]+'</span><h4 style="font-family:var(--serif);font-size:1.2rem">'+sec[1]+'</h4></div><span class="dose-icon">'+(icons[sec[0]]||'•')+'</span></div>'+sec[2].map(function(t){return '<button class="task'+(done.indexOf(t[0])>-1?' done':'')+'" data-id="'+t[0]+'"><span class="box"><svg viewBox="0 0 12 12"><path d="M2 6.5l2.5 2.5L10 3.5"/></svg></span><span class="txt">'+t[1]+'</span></button>'}).join('')+'</div>';
+    }).join('');
+    el.innerHTML='<div class="datebar"><button id="pv" aria-label="Өмнөх өдөр">‹</button><div style="text-align:center"><span class="lbl">ӨДӨР '+String(n).padStart(2,"0")+' / 90</span><div class="mono">'+ymd(d)+'</div></div><button id="nx" aria-label="Дараах өдөр">›</button></div>'+ 
+      '<div class="dose-hero"><div class="dose-hero-top"><div><span class="lbl">ӨНӨӨДРИЙН ЖОР</span><h3>'+(done.length===total?'Өнөөдрийн тун бүрэн ✓':'Өнөөдөр '+total+' жижиг алхам')+'</h3></div><span class="dose-score" id="cnt">'+done.length+' / '+total+' · '+pct+'%</span></div><div class="dose-progress"><i id="pb" style="width:'+pct+'%"></i></div></div>'+ 
+      '<div class="dose-grid">'+taskCards+'</div>'+ 
+      '<div class="dose-bottom"><div class="moodbox"><span class="lbl">CHECK-IN</span><div class="moodtitle">Өнөөдөр ямар байна?</div><div class="moods">'+MOODS.map(function(m){return '<button class="mood'+(mv===m.v?' on':'')+'" data-v="'+m.v+'"><span>'+m.e+'</span><small>'+m.t+'</small></button>'}).join('')+'</div></div>'+ 
+      '<div class="dailyq"><span class="lbl">ӨДРИЙН НЭГ АСУУЛТ</span><label for="dailyAnswer">'+DAILY_Q[qi]+'</label><textarea id="dailyAnswer" rows="2" placeholder="Энд бичээрэй…">'+esc(qv)+'</textarea><div class="qsave" id="qsave"></div></div></div>';
+    el.querySelector("#pv").disabled=n<=1;el.querySelector("#nx").disabled=n>=Math.min(90,Math.max(1,dn));
+    el.querySelector("#pv").onclick=function(){d=new Date(d.getTime()-DAYMS);render()};
+    el.querySelector("#nx").onclick=function(){d=new Date(d.getTime()+DAYMS);render()};
+    el.querySelectorAll(".task").forEach(function(b){b.onclick=function(){
+      var cur=get(key(d),[]),id=b.dataset.id,ix=cur.indexOf(id);if(ix>-1)cur.splice(ix,1);else cur.push(id);set(key(d),cur);render();
+    }});
+    el.querySelectorAll(".mood").forEach(function(b){b.onclick=function(){set(moodKey(d),b.dataset.v);el.querySelectorAll(".mood").forEach(function(x){x.classList.toggle("on",x===b)})}});
+    var ta=el.querySelector("#dailyAnswer"),timer;ta.oninput=function(){set(qKey(d),ta.value);var sv=el.querySelector("#qsave");sv.textContent="Хадгалж байна…";clearTimeout(timer);timer=setTimeout(function(){sv.textContent="✓ Хадгалагдсан"},300)};
+  }
+  render();
+}
+
+var MONTHS=[
+ ["10-р сар","Эхлэх","Start",["Өглөөний цаг тогтоох","Солонгос хэлний хичээлдээ тогтмол суух","Ном унших дадал эхлүүлэх","7 хоногт 1 өдөр хоолоо авчрах"],
+  [["1–2 дахь 7 хоног","06:20-д босох хэмнэлээ тогтоож, өглөөний дадлаа тогтвортой болгох"],["3 дахь 7 хоног","Солонгос хэлний хичээлдээ тасралтгүй суух. Мэргэжлийн сэдвийн тэмдэглэл"],["4 дэх 7 хоног","Амралтын өдөр Excel-ийн 1 шинэ функц сурах"],["Ном","Супер энгийн сэтгэл судлал · Монте-Кристо гүн"],["Хоол","Даваа гаригт хоолоо авчирч эхлэх. Ням гаригт 7 хоногийн хоолоо төлөвлөх"],["Санхүү","Орлого орох бүрт эхлээд хадгаламжаа хийж, 2 долоо хоногийн төсөв гаргах. Зарлагаа өдөр бүр бүртгэж эхлэх"]]],
+ ["11-р сар","Тогтворжуулах","Stabilize",["Дадлаа таслахгүй үргэлжлүүлэх","Шинэ ур чадвар нэмэх","7 хоногт 2–3 өдөр хоолоо авчрах"],
+  [["1–2 дахь 7 хоног","Бүх дадлаа тасралтгүй үргэлжлүүлэх. Алгассан өдөр маргааш нь дахин эхлэх"],["3 дахь 7 хоног","Шинэ ур чадвар 1-ийг сонгож, өдөр бүр бага багаар дадлагажуулах"],["4 дэх 7 хоног","Өдрийн тунгаа эргэн харж, ажиллахгүй байгаа хэсгийг засах"],["Ном","1 хувь хүний хөгжил, 1 уран зохиол"],["Хоол","Оройн хоолоо илүү хийж, 7 хоногт 2–3 өдөр авчрах"],["Санхүү","Сарын зарлагаа харж, гадуур хоолны зардал хэр багассаныг тооцох. 24 цагийн дүрмийг хэрэглэж эхлэх"]]],
+ ["12-р сар","Дүгнэх","Review",["90 хоногийн ахицаа харах","7 хоногт 3–5 өдөр хоолоо авчрах","Дараагийн шатны төлөвлөгөө гаргах"],
+  [["1–2 дахь 7 хоног","Дадлаа үргэлжлүүлж, үлдсэн зорилгуудаа дуусгах"],["3 дахь 7 хоног","90 хоногийн ахицаа хэмжих: дадлын тэмдэглэл, солонгос хэлний түвшин, уншсан ном"],["4 дэх 7 хоног","Дараагийн 90 хоногийн жороо бичих"],["Ном","1 хувь хүний хөгжил, 1 уран зохиол"],["Хоол","7 хоногт 3–5 өдөр хоолоо авчрах"],["Санхүү","3 сарын хадгаламж, зарлагаа дүгнэж, нөөц сангийн зорилго тавих"]]]];
+function course(el){
+  el.innerHTML='<div class="tl">'+MONTHS.map(function(m,i){
+    var inner='<div class="wk">'+m[4].map(function(w){return '<div><span class="lbl">'+w[0]+'</span>'+w[1]+'</div>'}).join("")+
+      '<div class="fu"><span class="lbl">Сарын эцэст · Follow-up</span><ul class="dash-list"><li>Юу сайн болсон?</li><li>Юу хэцүү байсан?</li><li>Юуг өөрчлөх вэ?</li></ul></div></div>';
+    return '<div class="acc'+(i===0?' on':'')+'"><button><span class="mh"><span class="m">'+m[0]+'</span><span class="t">'+m[1]+' <span class="e">'+m[2]+'</span></span><ul>'+m[3].map(function(x){return "<li>"+x+"</li>"}).join("")+'</ul></span><span class="plus"></span></button><div class="body"><div><div class="in">'+inner+'</div></div></div></div>'}).join("")+'</div>';
+  wireAcc(el);
+}
+
+function progress(el){
+  var kor=0,read=0,full=0,sum=0,elapsed=Math.max(0,Math.min(90,dn)),cells="";
+  for(var i=0;i<90;i++){var d=new Date(START.getTime()+i*DAYMS),v=get(key(d),[]);
+    if(v.indexOf("d2")>-1)kor+=120;if(v.indexOf("d3")>-1||v.indexOf("s4")>-1)read++;
+    if(i<elapsed){sum+=v.length/nTasks(d);if(v.length>=nTasks(d))full++}
+    cells+='<i class="'+(i===elapsed-1?"today":"")+'" style="--o:'+(v.length/nTasks(d)).toFixed(2)+'" title="Day '+(i+1)+'"></i>'}
+  var cons=elapsed?Math.round(sum/elapsed*100):0,ex=get("od90:excel",0);
+  el.innerHTML='<div class="block"><span class="lbl">Day</span><div class="big"><b>'+String(elapsed).padStart(2,"0")+'</b><span>/ 90</span></div><div class="thin"><i style="width:'+(elapsed/90*100)+'%"></i></div></div>'+
+   '<div class="stats"><div class="st"><span class="lbl">Солонгос хэл</span><b>'+(kor/60).toFixed(1)+' ц</b><small>0 → '+(kor/60).toFixed(1)+' цаг</small></div>'+
+   '<div class="st"><span class="lbl">Books</span><b>'+(function(){var bd=bookData(),n=0;[10,11,12].forEach(function(m){if(bd[m].devDone)n++;if(bd[m].ficDone)n++});return n})()+' / 6</b><small>'+read+' өдөр уншсан</small></div>'+
+   '<div class="st"><span class="lbl">Excel</span><b id="exv">'+ex+'</b><div class="step"><button id="exm" aria-label="Хасах">−</button><small>шинэ ур чадвар</small><button id="exp" aria-label="Нэмэх">+</button></div></div>'+
+   '<div class="st"><span class="lbl">Habit consistency</span><b>'+cons+'%</b><small>'+full+' бүтэн өдөр</small></div></div>'+
+   '<div class="block"><div class="bt"><h4>90 өдөр</h4><span class="lbl">Нэг цэг = нэг өдөр</span></div><div class="dots">'+cells+'</div><div class="legend"><span>○ хоосон</span><span>● бүтэн тун</span></div></div>';
+  function exs(v){ex=Math.max(0,v);set("od90:excel",ex);el.querySelector("#exv").textContent=ex}
+  el.querySelector("#exp").onclick=function(){exs(ex+1)};el.querySelector("#exm").onclick=function(){exs(ex-1)};
+}
+
+var QS=["Энэ сард би юугаараа бахархаж байна?","Хамгийн хэцүү байсан зүйл?","Юуг дахиж давтахгүй вэ?","Юуг үргэлжлүүлэх вэ?","Дараагийн сарын нэг гол зорилго?"];
+function follow(el){
+  var m=T.getMonth()>=9&&T.getMonth()<=11?T.getMonth()+1:10,timer;
+  function render(){
+    var a=get("od90:fu:"+m,{}),mh='',mc={tired:0,okay:0,good:0,fire:0};
+    for(var ii=0;ii<90;ii++){var md=new Date(START.getTime()+ii*DAYMS);if(md.getMonth()+1!==m)continue;var mm=get(moodKey(md),'');if(mm){mc[mm]++;var mo=MOODS.filter(function(x){return x.v===mm})[0];mh+='<span title="'+ymd(md)+' · '+mo.t+'">'+mo.e+'</span>'}}
+    var totalMood=mc.tired+mc.okay+mc.good+mc.fire;
+    el.innerHTML='<div class="tabs">'+[10,11,12].map(function(x){return '<button data-m="'+x+'" class="'+(x===m?"on":"")+'">'+x+'-р сар</button>'}).join("")+'</div>'+
+     '<div class="mood-month"><span class="lbl">Сарын mood</span><div class="moodline">'+(mh||'<span>·</span>')+'</div><div class="moodsum">😴 '+mc.tired+' · 😐 '+mc.okay+' · 🙂 '+mc.good+' · 🔥 '+mc.fire+' · Нийт '+totalMood+' өдөр</div></div>'+
+     '<div class="note"><span class="lbl">Сарын дүгнэлт</span><div style="height:.8rem"></div>'+
+     QS.map(function(q,i){return '<div class="q"><label for="q'+i+'">'+q+'</label><textarea id="q'+i+'" data-i="'+i+'" rows="2">'+esc(a[i]||"")+'</textarea></div>'}).join("")+'</div><div class="saved" id="sv"></div>';
+    el.querySelectorAll(".tabs button").forEach(function(b){b.onclick=function(){m=+b.dataset.m;render()}});
+    el.querySelectorAll("textarea").forEach(function(t){t.oninput=function(){
+      var cur=get("od90:fu:"+m,{});cur[t.dataset.i]=t.value;set("od90:fu:"+m,cur);
+      var sv=el.querySelector("#sv");sv.textContent="Хадгалж байна…";clearTimeout(timer);timer=setTimeout(function(){sv.textContent="✓ Хадгалагдсан"},500)}});
+  }
+  render();
+}
+})();
+</script>
+</body>
+</html>
